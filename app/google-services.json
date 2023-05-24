@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "813760017955",
+    "project_id": "vms-app-94dd9",
+    "storage_bucket": "vms-app-94dd9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813760017955:android:b73d87920bea94ed74a396",
+        "android_client_info": {
+          "package_name": "com.example.vms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813760017955-rdsmcaar9chi96qqimftag84b04r2d8u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vms",
+            "certificate_hash": "abf086ab94cf51ec19d552f9cd97dbfcddaf3bcb"
+          }
+        },
+        {
+          "client_id": "813760017955-98463dnqu65mp14o6unptv887eb8kfau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSZMtiuDD3p726obz7z30mc5AJJhSIjL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813760017955-98463dnqu65mp14o6unptv887eb8kfau.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
