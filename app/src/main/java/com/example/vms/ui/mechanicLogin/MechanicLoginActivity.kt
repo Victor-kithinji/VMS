@@ -3,7 +3,6 @@ package com.example.vms.ui.mechanicLogin
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -11,7 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vms.R
 import com.example.vms.ui.dashboard.MainActivity
-import com.example.vms.ui.register.Register
+import com.example.vms.ui.mechanicRegister.MechanicRegisterActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class MechanicLoginActivity : AppCompatActivity() {
@@ -25,15 +24,15 @@ class MechanicLoginActivity : AppCompatActivity() {
         val accountLabel: TextView = findViewById(R.id.accountText)
 
         val firebaseAuth = FirebaseAuth.getInstance()
-        fun login(view: View){
+        fun login(){
             val email = emailAddress.text.toString()
             val password = mechanicPassword.text.toString()
             if (email.isEmpty()) {
-                emailAddress.error = ("Empty Email Address");
+                emailAddress.error = ("Empty Email Address")
             } else if (password.isEmpty()) {
-                mechanicPassword.error = ("Empty Password");
+                mechanicPassword.error = ("Empty Password")
             } else if (password.length < 8) {
-                mechanicPassword.error = ("Too weak password, use 8 characters");
+                mechanicPassword.error = ("Too weak password, use 8 characters")
             }else{
                 firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
@@ -47,12 +46,10 @@ class MechanicLoginActivity : AppCompatActivity() {
             }
         }
         mechanicLogin.setOnClickListener {
-            val intent = Intent(this@MechanicLoginActivity, MainActivity::class.java)
-            startActivity(intent)
-            finish()
+            login()
         }
         accountLabel.setOnClickListener {
-            val intent = Intent(this@MechanicLoginActivity, Register::class.java)
+            val intent = Intent(this@MechanicLoginActivity, MechanicRegisterActivity::class.java)
             startActivity(intent)
             finish()
         }

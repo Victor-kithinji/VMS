@@ -9,22 +9,23 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vms.R
-import com.example.vms.ui.login.Login
 import com.example.vms.ui.mechanicLogin.MechanicLoginActivity
 import com.example.vms.ui.register.User
 import com.google.firebase.auth.FirebaseAuth
 
 class MechanicRegisterActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mechanic_register)
-        val fullNameLabel: TextView = findViewById(R.id.mechanicFullNameLabel)
+
+
+        val fullNameLabel: EditText = findViewById(R.id.mechanicFullNameLabel)
         val emailAddressLabel: EditText = findViewById(R.id.editTextTextEmailAddressLabel)
         val phoneNumber: EditText = findViewById(R.id.editTextPhoneLabel)
         val passwordLabel: EditText = findViewById(R.id.editTextTextPassword)
         val registerButton: Button = findViewById(R.id.RegisterLabel)
-        val haveAccount: TextView =findViewById(R.id.dontHaveAccountLabel)
+        val haveAccount: TextView = findViewById(R.id.dontHaveAccountLabel)
         val mechanicLabel: TextView = findViewById(R.id.mechanicLabel)
 
         val firebaseAuth = FirebaseAuth.getInstance()
@@ -35,43 +36,35 @@ class MechanicRegisterActivity : AppCompatActivity() {
 
 
 
-        if (fullName.isEmpty()) {
-            fullNameLabel.error = "Empty Username";
-        } else if (phone.isEmpty()) {
-            phoneNumber.error = ("Empty Phone Number");
-        } else if (email.isEmpty()) {
-            emailAddressLabel.error = ("Empty Email Address");
-        } else if (password.isEmpty()) {
-            passwordLabel.error = ("Empty Password");
-        } else if (password.length < 8) {
-            passwordLabel.error = ("Too weak password, use 8 characters");
-        } else {
+        registerButton.setOnClickListener {
+//             if (phone.isEmpty()) {
+//                phoneNumber.error = ("Empty Phone Number")
+//            } else if (email.isEmpty()) {
+//                emailAddressLabel.error = ("Empty Email Address")
+//            } else if (password.isEmpty()) {
+//                passwordLabel.error = ("Empty Password")
+//            } else if (password.length < 8) {
+//                passwordLabel.error = ("Too weak password, use 8 characters")
+//            } else {
 
-            firebaseAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        val userId = firebaseAuth.currentUser?.uid
-                        val user = User(password, email, phone, fullName)
-                        goToLogin()
+                firebaseAuth.createUserWithEmailAndPassword(email, password)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            val userId = firebaseAuth.currentUser?.uid
+                            val user = User(password, email, phone, fullName)
+                            goToLogin()
+                        }
+
+                    }.addOnFailureListener { exception ->
+                        Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG)
+                            .show()
                     }
 
-                }.addOnFailureListener { exception ->
-                    Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG)
-                        .show()
-                }
-
-            registerButton.setOnClickListener {
-                val intent = Intent(this@MechanicRegisterActivity, Login::class.java)
-                startActivity(intent)
-                finish()
-            }
             haveAccount.setOnClickListener {
-                val intent = Intent(this@MechanicRegisterActivity, Login::class.java)
+                val intent = Intent(this@MechanicRegisterActivity, MechanicLoginActivity::class.java)
                 startActivity(intent)
                 finish()
             }
-
-
         }
     }
 
