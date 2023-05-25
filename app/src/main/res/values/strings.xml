@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">VMS</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="full_name">Full Name</string>
+    <string name="create_mechanic_s_account">Create Mechanic\'s account</string>
+    <string name="already_have_account_login">Already Have Account? Login</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="don_t_have_an_account_register">Don\'t have an account? Register</string>
+    <string name="password5">Password</string>
+    <string name="email4">Email</string>
+    <string name="email_address">Email Address</string>
+    <string name="password3">Password</string>
+    <string name="login3">Login</string>
+    <string name="don_t_have_an_account_register3">Don\'t have an account? Register</string>
 </resources>
