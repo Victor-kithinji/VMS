@@ -23,8 +23,12 @@ class MechanicLoginActivity : AppCompatActivity() {
         val mechanicLogin: Button = findViewById(R.id.mechanicLogin)
         val accountLabel: TextView = findViewById(R.id.accountText)
 
+<<<<<<< HEAD
         firebaseAuth = FirebaseAuth.getInstance()
 
+=======
+        val firebaseAuth = FirebaseAuth.getInstance()
+>>>>>>> origin/master
         fun login(){
             val email = emailAddress.text.toString()
             val password = mechanicPassword.text.toString()

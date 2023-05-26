@@ -10,14 +10,21 @@
     <EditText
         android:id="@+id/fullNameLabel"
         android:layout_width="0dp"
+<<<<<<< HEAD
         android:layout_height="wrap_content"
+=======
+        android:layout_height="40dp"
+>>>>>>> origin/master
         android:layout_marginStart="16dp"
         android:layout_marginTop="160dp"
         android:layout_marginEnd="16dp"
         android:hint="Full Name"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
+<<<<<<< HEAD
         android:inputType="text"
+=======
+>>>>>>> origin/master
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,8 +64,12 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/phoneLabel"
         android:autofillHints="emailAddress" />
+=======
+        app:layout_constraintTop_toBottomOf="@+id/phoneLabel" />
+>>>>>>> origin/master
 
     <EditText
         android:id="@+id/passwordLabel"

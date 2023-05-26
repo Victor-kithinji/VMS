@@ -12,7 +12,11 @@
     <EditText
         android:id="@+id/editTextTextEmailAddressLabel"
         android:layout_width="0dp"
+<<<<<<< HEAD
         android:layout_height="wrap_content"
+=======
+        android:layout_height="55dp"
+>>>>>>> origin/master
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
@@ -24,8 +28,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/mechanicFullNameLabel"
         android:autofillHints="emailAddress" />
+=======
+        app:layout_constraintTop_toBottomOf="@+id/mechanicFullNameLabel" />
+>>>>>>> origin/master
 
     <EditText
         android:id="@+id/editTextPhoneLabel"
@@ -43,8 +51,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddressLabel"
         android:autofillHints="phone" />
+=======
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddressLabel" />
+>>>>>>> origin/master
 
     <EditText
         android:id="@+id/editTextTextPassword"
@@ -61,8 +73,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/editTextPhoneLabel"
         android:autofillHints="password" />
+=======
+        app:layout_constraintTop_toBottomOf="@+id/editTextPhoneLabel" />
+>>>>>>> origin/master
 
     <Button
         android:id="@+id/RegisterLabel"
@@ -70,7 +86,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:backgroundTint="@color/red"
+<<<<<<< HEAD
         android:text="@string/register"
+=======
+        android:text="Register"
+>>>>>>> origin/master
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
         app:layout_constraintHorizontal_bias="0.464"
@@ -93,7 +113,11 @@
         android:id="@+id/mechanicLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:text="@string/create_mechanic_s_account"
+=======
+        android:text="Create Mechanic's account"
+>>>>>>> origin/master
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textSize="24sp"
@@ -103,19 +127,32 @@
 
     <EditText
         android:id="@+id/mechanicFullNameLabel"
+<<<<<<< HEAD
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+=======
+        android:layout_width="375dp"
+        android:layout_height="51dp"
+>>>>>>> origin/master
         android:layout_marginStart="24dp"
         android:layout_marginTop="176dp"
         android:layout_marginEnd="24dp"
         android:ems="10"
+<<<<<<< HEAD
         android:hint="@string/full_name"
+=======
+        android:hint="Full Name"
+>>>>>>> origin/master
         android:inputType="text"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.425"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toTopOf="parent"
         android:autofillHints="name" />
+=======
+        app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> origin/master
 </androidx.constraintlayout.widget.ConstraintLayout>

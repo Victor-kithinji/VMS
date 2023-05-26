@@ -15,12 +15,16 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class MechanicRegisterActivity : AppCompatActivity() {
+<<<<<<< HEAD
 
     private lateinit var firebaseAuth: FirebaseAuth
 
     private lateinit var databaseReference: DatabaseReference
 
 
+=======
+    @SuppressLint("MissingInflatedId", "SuspiciousIndentation")
+>>>>>>> origin/master
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mechanic_register)
@@ -32,6 +36,7 @@ class MechanicRegisterActivity : AppCompatActivity() {
         val passwordLabel: EditText = findViewById(R.id.editTextTextPassword)
         val registerButton: Button = findViewById(R.id.RegisterLabel)
         val haveAccount: TextView = findViewById(R.id.dontHaveAccountLabel)
+<<<<<<< HEAD
 
         firebaseAuth = FirebaseAuth.getInstance()
         databaseReference = FirebaseDatabase.getInstance().getReference("Mechanics")
@@ -56,12 +61,35 @@ class MechanicRegisterActivity : AppCompatActivity() {
             } else if (password.length < 8) {
                 passwordLabel.error = ("Too weak password, use 8 characters")
             } else {
+=======
+        val mechanicLabel: TextView = findViewById(R.id.mechanicLabel)
+
+        val firebaseAuth = FirebaseAuth.getInstance()
+        val email = emailAddressLabel.text.toString()
+        val password = passwordLabel.text.toString()
+        val fullName = fullNameLabel.text.toString()
+        val phone = phoneNumber.text.toString()
+
+
+
+        registerButton.setOnClickListener {
+//             if (phone.isEmpty()) {
+//                phoneNumber.error = ("Empty Phone Number")
+//            } else if (email.isEmpty()) {
+//                emailAddressLabel.error = ("Empty Email Address")
+//            } else if (password.isEmpty()) {
+//                passwordLabel.error = ("Empty Password")
+//            } else if (password.length < 8) {
+//                passwordLabel.error = ("Too weak password, use 8 characters")
+//            } else {
+>>>>>>> origin/master
 
                 firebaseAuth.createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
                             val userId = firebaseAuth.currentUser?.uid
                             val user = User(password, email, phone, fullName)
+<<<<<<< HEAD
 
                             databaseReference.child(userId!!).setValue(user)
 
@@ -87,6 +115,22 @@ class MechanicRegisterActivity : AppCompatActivity() {
         }
 
 
+=======
+                            goToLogin()
+                        }
+
+                    }.addOnFailureListener { exception ->
+                        Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG)
+                            .show()
+                    }
+
+            haveAccount.setOnClickListener {
+                val intent = Intent(this@MechanicRegisterActivity, MechanicLoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
+>>>>>>> origin/master
     }
 
     private fun goToLogin() {
