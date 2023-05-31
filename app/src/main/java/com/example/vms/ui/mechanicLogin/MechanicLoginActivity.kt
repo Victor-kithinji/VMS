@@ -8,13 +8,14 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vms.R
-import com.example.vms.ui.dashboard.MainActivity
+import com.example.vms.ui.dashboard.MechanicDashboard
 import com.example.vms.ui.mechanicRegister.MechanicRegisterActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class MechanicLoginActivity : AppCompatActivity() {
 
     var firebaseAuth: FirebaseAuth? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mechanic_login)
@@ -23,12 +24,8 @@ class MechanicLoginActivity : AppCompatActivity() {
         val mechanicLogin: Button = findViewById(R.id.mechanicLogin)
         val accountLabel: TextView = findViewById(R.id.accountText)
 
-<<<<<<< HEAD
         firebaseAuth = FirebaseAuth.getInstance()
 
-=======
-        val firebaseAuth = FirebaseAuth.getInstance()
->>>>>>> origin/master
         fun login(){
             val email = emailAddress.text.toString()
             val password = mechanicPassword.text.toString()
@@ -41,7 +38,7 @@ class MechanicLoginActivity : AppCompatActivity() {
             }else{
                 firebaseAuth!!.signInWithEmailAndPassword(email,password).addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, MechanicDashboard::class.java)
                         startActivity(intent)
                         finish()
                     }

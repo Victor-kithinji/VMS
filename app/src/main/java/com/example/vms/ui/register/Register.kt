@@ -24,16 +24,12 @@ class Register : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-<<<<<<< HEAD
         val fullNameLabel: EditText = findViewById(R.id.fullNameLabel)
-=======
-        val textView: TextView = findViewById(R.id.fullNameLabel)
->>>>>>> origin/master
         val phoneLabel: EditText = findViewById(R.id.phoneLabel)
         val emailAddressLabel: EditText = findViewById(R.id.emailAddressLabel)
         val passwordLabel: EditText = findViewById(R.id.passwordLabel)
         val registerLabel: Button = findViewById(R.id.registerLabel)
-<<<<<<< HEAD
+
         val alreadyHaveAccount: TextView = findViewById(R.id.alreadyHaveAccount)
 
          firebaseAuth = FirebaseAuth.getInstance()
@@ -76,52 +72,6 @@ class Register : AppCompatActivity() {
                     }.addOnFailureListener { exception ->
                         Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG).show()
                     }
-=======
-        val alreadyHaveAccount: EditText = findViewById(R.id.alreadyHaveAccount)
-
-        val firebaseAuth = FirebaseAuth.getInstance()
-
-        val email = emailAddressLabel.text.toString()
-        val password = passwordLabel.text.toString()
-        val fullName = textView.text.toString()
-        val phone = phoneLabel.text.toString()
-
-
-
-
-
-
-            registerLabel.setOnClickListener {
-                if (fullName.isEmpty()) {
-                    textView.error = "Empty Username"
-                }else if (phone.isEmpty()) {
-                    phoneLabel.error = ("Empty Phone Number")
-                } else if (email.isEmpty()) {
-                    emailAddressLabel.error = ("Empty Email Address")
-                } else if (password.isEmpty()) {
-                    passwordLabel.error = ("Empty Password")
-                } else if (password.length < 8) {
-                    passwordLabel.error = ("Too weak password, use 8 characters")
-                } else {
-
-                    firebaseAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener { task ->
-                            if (task.isSuccessful) {
-                                val userId = firebaseAuth.currentUser?.uid
-                                val user = User(password, email, phone, fullName)
-                                goToLogin()
-                            }
-
-                        }.addOnFailureListener { exception ->
-                            Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG)
-                                .show()
-                        }
->>>>>>> origin/master
-            }
-
-
-
-        }
 
         alreadyHaveAccount.setOnClickListener {
             val intent = Intent(this@Register, Login::class.java)
@@ -133,6 +83,8 @@ class Register : AppCompatActivity() {
             val intent = Intent(this@Register, Login::class.java)
             startActivity(intent)
             finish()
+        }
+    }
         }
     }
 
