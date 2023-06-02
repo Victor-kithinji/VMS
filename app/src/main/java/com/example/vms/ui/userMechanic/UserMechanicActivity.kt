@@ -1,4 +1,4 @@
-package com.example.vms.ui.register
+package com.example.vms.ui.userMechanic
 
 import android.content.Intent
 import android.os.Bundle

@@ -45,4 +45,10 @@
     <string name="profile2">Profile</string>
     <string name="profile3">Profile</string>
     <string name="log_out">Log out</string>
+    <string name="Parts">parts</string>
+    <string name="spare_parts">Spare Parts</string>
+    <string name="logout">Logout</string>
+    <string name="change_password">Change Password</string>
+    <string name="kithinji">kithinji</string>
+    <string name="victor">victor</string>
 </resources>

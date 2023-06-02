@@ -316,7 +316,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$PROJECT_DIR$/../Android/Sdk/icons/material/materialicons/logout/baseline_logout_24.xml" />
+                                      <entry key="url" value="file:$PROJECT_DIR$/../Android/Sdk/icons/material/materialicons/person_pin/baseline_person_pin_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -326,7 +326,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_logout" />
+                            <entry key="color" value="2ac11f" />
+                            <entry key="outputName" value="ic_baseline_person_pin_24" />
                           </map>
                         </option>
                       </PersistentState>

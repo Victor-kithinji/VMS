@@ -1,24 +1,29 @@
 package com.example.vms.ui.dashboard
 
 import android.annotation.SuppressLint
-import android.icu.lang.UCharacter.GraphemeClusterBreak.V
+import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageButton
-import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.vms.R
+import com.example.vms.ui.login.Login
+import com.example.vms.ui.userNavigationBar.Rate
+import com.example.vms.ui.userNavigationBar.SpareParts
+import com.example.vms.ui.userNavigationBar.UserNotification
+import com.example.vms.ui.userNavigationBar.UserProfile
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class UserDashboard : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var actionBarToggle: ActionBarDrawerToggle
     private lateinit var navView: NavigationView
     private lateinit var map: GoogleMap
+    private lateinit var firebaseAuth: FirebaseAuth
 
 
     @SuppressLint("MissingInflatedId")
@@ -65,27 +70,31 @@ class UserDashboard : AppCompatActivity() {
             navView.setNavigationItemSelectedListener { menuItem ->
                 when (menuItem.itemId) {
                     R.id.login -> {
-                        Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show()
+                        goToUserProfile()
                         true
                     }
                     R.id.rate -> {
-                        Toast.makeText(this, "Rate", Toast.LENGTH_SHORT).show()
+                        goToRate()
                         true
                     }
                     R.id.logout -> {
-                        Toast.makeText(this, "Log Out", Toast.LENGTH_SHORT).show()
+                        firebaseAuth = FirebaseAuth.getInstance()
+                        firebaseAuth.signOut()
+                        val intent = Intent(this, Login::class.java)
+                        startActivity(intent)
+                        finish()
                         true
                     }
                     R.id.notification -> {
-                        Toast.makeText(this, "Notification", Toast.LENGTH_SHORT).show()
+                        goToUserNotification()
                         true
                     }
                     R.id.brands -> {
-                        Toast.makeText(this, "Spare Brand", Toast.LENGTH_SHORT).show()
+                        goToSpareParts()
                         true
                     }
                     R.id.share -> {
-                        Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show()
+                        goToShare()
                         true
                     }
                     else -> {
@@ -95,5 +104,38 @@ class UserDashboard : AppCompatActivity() {
             }
 
         }
+    }
+
+    @SuppressLint("ResourceType")
+    private fun goToShare() {
+        val intent = Intent(android.content.Intent.ACTION_SEND)
+        val shareBody = "Here is the share content body"
+        intent.type = "text/plain"
+        intent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(2))
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody)
+        startActivity(Intent.createChooser(intent, getString(2)))
+    }
+
+    private fun goToSpareParts() {
+        val intent = Intent(this@UserDashboard, SpareParts::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    private fun goToRate() {
+            val intent = Intent(this@UserDashboard, Rate::class.java)
+            startActivity(intent)
+            finish()
+
+        }
+
+        private fun goToUserProfile() {
+            val intent = Intent(this@UserDashboard, UserProfile::class.java)
+            startActivity(intent)
+            finish()
+
+        }
+    private fun goToUserNotification(){
+        val intent = Intent(this@UserDashboard, UserNotification::class.java)
     }
 }
