@@ -6,6 +6,20 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vms.R
+import com.example.vms.ui.spareParts.audi.Audi
+import com.example.vms.ui.spareParts.benz.Benz
+import com.example.vms.ui.spareParts.bmw.Bmw
+import com.example.vms.ui.spareParts.ford.Ford
+import com.example.vms.ui.spareParts.honda.Honda
+import com.example.vms.ui.spareParts.isuzu.Isuzu
+import com.example.vms.ui.spareParts.mazda.Mazda
+import com.example.vms.ui.spareParts.mitsubishi.Mitsubishi
+import com.example.vms.ui.spareParts.nissan.Nissan
+import com.example.vms.ui.spareParts.peugeot.Peugeot
+import com.example.vms.ui.spareParts.subaru.Subaru
+import com.example.vms.ui.spareParts.suzuki.Suzuki
+import com.example.vms.ui.spareParts.toyota.Toyota
+import com.example.vms.ui.spareParts.volkswagen.Volkswagen
 
 class Brands : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -29,72 +43,72 @@ class Brands : AppCompatActivity() {
         val honda:ImageView = findViewById(R.id.honda)
 
         benz.setOnClickListener {
-            val intent = Intent(this@Brands, benz::class.java)
+            val intent = Intent(this@Brands, Benz::class.java)
             startActivity(intent)
             finish()
         }
         audi.setOnClickListener {
-            val intent =  Intent(this@Brands, audi::class.java)
+            val intent =  Intent(this@Brands, Audi::class.java)
             startActivity(intent)
             finish()
         }
         toyota.setOnClickListener {
-            val intent =  Intent(this@Brands, toyota::class.java)
+            val intent =  Intent(this@Brands, Toyota::class.java)
             startActivity(intent)
             finish()
         }
         mazda.setOnClickListener {
-            val intent =  Intent(this@Brands, mazda::class.java)
+            val intent =  Intent(this@Brands, Mazda::class.java)
             startActivity(intent)
             finish()
         }
         nissan.setOnClickListener {
-            val intent =  Intent(this@Brands, nissan::class.java)
+            val intent =  Intent(this@Brands, Nissan::class.java)
             startActivity(intent)
             finish()
         }
         subaru.setOnClickListener {
-            val intent =  Intent(this@Brands, subaru::class.java)
+            val intent =  Intent(this@Brands, Subaru::class.java)
             startActivity(intent)
             finish()
         }
         bmw.setOnClickListener {
-            val intent =  Intent(this@Brands, bmw::class.java)
+            val intent =  Intent(this@Brands, Bmw::class.java)
             startActivity(intent)
             finish()
         }
         isuzu.setOnClickListener {
-            val intent =  Intent(this@Brands, isuzu::class.java)
+            val intent =  Intent(this@Brands, Isuzu::class.java)
             startActivity(intent)
             finish()
         }
         volkswagen.setOnClickListener {
-            val intent =  Intent(this@Brands, volkswagen::class.java)
+            val intent =  Intent(this@Brands, Volkswagen::class.java)
             startActivity(intent)
             finish()
         }
         mitsubishi.setOnClickListener {
-            val intent =  Intent(this@Brands, mitsubishi::class.java)
+            val intent =  Intent(this@Brands, Mitsubishi::class.java)
             startActivity(intent)
             finish()
         }
         ford.setOnClickListener {
-            val intent =  Intent(this@Brands, ford::class.java)
+            val intent =  Intent(this@Brands, Ford::class.java)
             startActivity(intent)
             finish()
         }
         suzuki.setOnClickListener {
-            val intent =  Intent(this@Brands, suzuki::class.java)
+            val intent =  Intent(this@Brands, Suzuki::class.java)
             startActivity(intent)
             finish()
         }
         peugeot.setOnClickListener {
-            val intent =  Intent(this@Brands, peugeot::class.java)
+            val intent =  Intent(this@Brands, Peugeot::class.java)
             startActivity(intent)
             finish()
         }
         honda.setOnClickListener {
-            val intent =  Intent(this@Brands, honda::class.java)
+            val intent =  Intent(this@Brands, Honda::class.java)
             startActivity(intent)
             finish()
         }

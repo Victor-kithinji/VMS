@@ -61,4 +61,13 @@
     <string name="to_edit">To edit</string>
     <string name="delete">Delete</string>
     <string name="empty_text">Oops! You do not have any tasks for today</string>
+    <string name="auto_parts">Auto Parts</string>
+    <string name="car_accessories">Car Accessories</string>
+    <string name="auto_engine">Auto Engine</string>
+    <string name="electrical_system">Electrical System</string>
+    <string name="tire_accessories">Tire Accessories</string>
+    <string name="title_activity_bmw_auto_engine">BmwAutoEngine</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
