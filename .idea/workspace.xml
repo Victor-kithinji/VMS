@@ -135,6 +135,10 @@
     <key name="android.template.2138966899">
       <recent name="com.example.vms.ui.dashboard" />
     </key>
+    <key name="android.template.-614440783">
+      <recent name="com.example.vms.ui.spareParts" />
+      <recent name="com.example.vms.ui.spareParts.spareParts" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
