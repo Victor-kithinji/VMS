@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.userNavigationBar.Brands">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/benz"
+            android:layout_width="117dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/audi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/benz" />
+
+        <ImageView
+            android:id="@+id/audi"
+            android:layout_width="117dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/benz"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/audi" />
+
+        <ImageView
+            android:id="@+id/toyota"
+            android:layout_width="117dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/mazda"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/benz"
+            app:srcCompat="@drawable/toyota" />
+
+        <ImageView
+            android:id="@+id/mazda"
+            android:layout_width="117dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/toyota"
+            app:layout_constraintTop_toBottomOf="@+id/audi"
+            app:srcCompat="@drawable/mazda" />
+
+        <ImageView
+            android:id="@+id/nissan2"
+            android:layout_width="117dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/subaru"
+            app:layout_constraintHorizontal_bias="0.419"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toyota"
+            app:srcCompat="@drawable/nissan" />
+
+        <ImageView
+            android:id="@+id/subaru"
+            android:layout_width="117dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nissan2"
+            app:layout_constraintTop_toBottomOf="@+id/mazda"
+            app:srcCompat="@drawable/subaru" />
+
+        <ImageView
+            android:id="@+id/bmw"
+            android:layout_width="117dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/isuzu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nissan2"
+            app:srcCompat="@drawable/bmw" />
+
+        <ImageView
+            android:id="@+id/isuzu"
+            android:layout_width="117dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bmw"
+            app:layout_constraintTop_toBottomOf="@+id/subaru"
+            app:srcCompat="@drawable/isuzu" />
+
+        <ImageView
+            android:id="@+id/volkswagen"
+            android:layout_width="117dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/mitsubishi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bmw"
+            app:srcCompat="@drawable/volkswagen" />
+
+        <ImageView
+            android:id="@+id/mitsubishi"
+            android:layout_width="117dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/volkswagen"
+            app:layout_constraintTop_toBottomOf="@+id/isuzu"
+            app:srcCompat="@drawable/mitsubishi" />
+
+        <ImageView
+            android:id="@+id/ford"
+            android:layout_width="117dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/suki"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/volkswagen"
+            app:srcCompat="@drawable/ford" />
+
+        <ImageView
+            android:id="@+id/suki"
+            android:layout_width="117dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ford"
+            app:layout_constraintTop_toBottomOf="@+id/mitsubishi"
+            app:srcCompat="@drawable/suzuki" />
+
+        <ImageView
+            android:id="@+id/peugeot"
+            android:layout_width="117dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/honda"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ford"
+            app:srcCompat="@drawable/peugeot"
+            tools:ignore="NotSibling" />
+
+        <ImageView
+            android:id="@+id/honda"
+            android:layout_width="117dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/peugeot"
+            app:layout_constraintTop_toBottomOf="@+id/suki"
+            app:srcCompat="@drawable/honda" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

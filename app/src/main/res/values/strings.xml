@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">VMS</string>
     <string name="phone_number">Phone Number</string>
     <string name="full_name">Full Name</string>
@@ -51,4 +51,14 @@
     <string name="change_password">Change Password</string>
     <string name="kithinji">kithinji</string>
     <string name="victor">victor</string>
+    <string name="task">Tasks</string>
+    <string name="create_tasks">Create Tasks</string>
+    <string name="title">title</string>
+    <string name="data">data</string>
+    <string name="timer">hour</string>
+    <string name="cancel">Cancel</string>
+    <string name="new_task">New Task</string>
+    <string name="to_edit">To edit</string>
+    <string name="delete">Delete</string>
+    <string name="empty_text">Oops! You do not have any tasks for today</string>
 </resources>
