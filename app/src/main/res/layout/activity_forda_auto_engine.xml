@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.spareParts.ford.FordaAutoEngine">
+    tools:context=".ui.spareParts.ford.FordAutoEngine">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

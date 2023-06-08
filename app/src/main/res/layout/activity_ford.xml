@@ -8,7 +8,7 @@
 
 
     <Button
-        android:id="@+id/autoParts"
+        android:id="@+id/autoPartsFord"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/carAccessories"
+        android:id="@+id/carAccessoriesFord"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -31,10 +31,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/autoParts" />
+        app:layout_constraintTop_toBottomOf="@+id/autoPartsFord" />
 
     <Button
-        android:id="@+id/autoEngine"
+        android:id="@+id/autoEngineFord"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -44,10 +44,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carAccessories" />
+        app:layout_constraintTop_toBottomOf="@+id/carAccessoriesFord" />
 
     <Button
-        android:id="@+id/electricalSystem"
+        android:id="@+id/electricalSystemFord"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -56,10 +56,10 @@
         android:text="@string/electrical_system"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/autoEngine" />
+        app:layout_constraintTop_toBottomOf="@+id/autoEngineFord" />
 
     <Button
-        android:id="@+id/tireAccessories"
+        android:id="@+id/tireAccessoriesFord"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -68,6 +68,6 @@
         android:text="@string/tire_accessories"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/electricalSystem" />
+        app:layout_constraintTop_toBottomOf="@+id/electricalSystemFord" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

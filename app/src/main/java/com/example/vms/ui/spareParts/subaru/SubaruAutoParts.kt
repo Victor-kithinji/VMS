@@ -1,7 +1,8 @@
 package com.example.vms.ui.spareParts.subaru
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.vms.R
 
 class SubaruAutoParts : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

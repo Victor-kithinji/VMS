@@ -13,11 +13,11 @@ class Ford : AppCompatActivity() {
         setContentView(R.layout.activity_ford)
 
 
-        val autoParts: Button = findViewById(R.id.autoParts)
-        val carAccessories: Button = findViewById(R.id.carAccessories)
-        val autoEngine: Button = findViewById(R.id.autoEngine)
-        val electricalSystem: Button = findViewById(R.id.electricalSystem)
-        val tireAccessories: Button = findViewById(R.id.tireAccessories)
+        val autoParts: Button = findViewById(R.id.autoPartsFord)
+        val carAccessories: Button = findViewById(R.id.carAccessoriesFord)
+        val autoEngine: Button = findViewById(R.id.autoEngineFord)
+        val electricalSystem: Button = findViewById(R.id.electricalSystemFord)
+        val tireAccessories: Button = findViewById(R.id.tireAccessoriesFord)
 
         autoParts.setOnClickListener{
             val intent = Intent(this@Ford, FordAutoParts::class.java)
@@ -25,7 +25,7 @@ class Ford : AppCompatActivity() {
             finish()
         }
         autoEngine.setOnClickListener{
-            val intent = Intent(this@Ford, FordaAutoEngine::class.java)
+            val intent = Intent(this@Ford, FordAutoEngine::class.java)
             startActivity(intent)
             finish()
         }

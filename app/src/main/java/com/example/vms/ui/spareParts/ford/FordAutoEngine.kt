@@ -1,12 +1,12 @@
-package com.example.vms.ui.spareParts.bmw
+package com.example.vms.ui.spareParts.ford
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vms.R
 
-class TireAccessories : AppCompatActivity() {
+class FordAutoEngine : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tire_accessories)
+        setContentView(R.layout.activity_forda_auto_engine)
     }
 }

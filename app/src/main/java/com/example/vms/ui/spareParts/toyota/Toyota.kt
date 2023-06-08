@@ -11,11 +11,11 @@ class Toyota : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_toyota)
 
-        val autoParts:Button = findViewById(R.id.autoParts)
-        val carAccessories:Button = findViewById(R.id.carAccessories)
-        val autoEngine:Button = findViewById(R.id.autoEngine)
-        val electricalSystem:Button = findViewById(R.id.electricalSystem)
-        val tireAccessories:Button = findViewById(R.id.tireAccessories)
+        val autoParts:Button = findViewById(R.id.autoPartsToyota)
+        val carAccessories:Button = findViewById(R.id.carAccessoriesToyota)
+        val autoEngine:Button = findViewById(R.id.autoEngineToyota)
+        val electricalSystem:Button = findViewById(R.id.electricalSystemToyota)
+        val tireAccessories:Button = findViewById(R.id.tireAccessoriesToyota)
 
         autoParts.setOnClickListener{
             val intent = Intent(this@Toyota, ToyotaAutoParts::class.java)

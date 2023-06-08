@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vms.R
-import com.example.vms.ui.spareParts.toyota.*
 
 class Subaru : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,11 +13,11 @@ class Subaru : AppCompatActivity() {
 
 
 
-        val autoParts: Button = findViewById(R.id.autoParts)
-        val carAccessories: Button = findViewById(R.id.carAccessories)
-        val autoEngine: Button = findViewById(R.id.autoEngine)
-        val electricalSystem: Button = findViewById(R.id.electricalSystem)
-        val tireAccessories: Button = findViewById(R.id.tireAccessories)
+        val autoParts: Button = findViewById(R.id.autoPartsSubaru)
+        val carAccessories: Button = findViewById(R.id.carAccessoriesSubaru)
+        val autoEngine: Button = findViewById(R.id.autoEngineSubaru)
+        val electricalSystem: Button = findViewById(R.id.electricalSystemSubaru)
+        val tireAccessories: Button = findViewById(R.id.tireAccessoriesSubaru)
 
         autoParts.setOnClickListener{
             val intent = Intent(this@Subaru, SubaruAutoParts::class.java)

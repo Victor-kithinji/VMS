@@ -1,26 +1,23 @@
 
 package com.example.vms.ui.spareParts.suzuki
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vms.R
-import com.example.vms.ui.spareParts.toyota.*
 
 class Suzuki : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_suzuki)
 
 
-        val autoParts: Button = findViewById(R.id.autoParts)
-        val carAccessories: Button = findViewById(R.id.carAccessories)
-        val autoEngine: Button = findViewById(R.id.autoEngine)
-        val electricalSystem: Button = findViewById(R.id.electricalSystem)
-        val tireAccessories: Button = findViewById(R.id.tireAccessories)
+        val autoParts: Button = findViewById(R.id.autoPartsSuzuki)
+        val carAccessories: Button = findViewById(R.id.carAccessoriesSuzuki)
+        val autoEngine: Button = findViewById(R.id.autoEngineSuzuki)
+        val electricalSystem: Button = findViewById(R.id.electricalSystemSuzuki)
+        val tireAccessories: Button = findViewById(R.id.tireAccessoriesSuzuki)
 
         autoParts.setOnClickListener{
             val intent = Intent(this@Suzuki, SuzukiAutoParts::class.java)

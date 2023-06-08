@@ -5,18 +5,17 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vms.R
-import com.example.vms.ui.spareParts.toyota.*
 
 class Bmw : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bmw)
 
-        val autoParts: Button = findViewById(R.id.autoParts)
-        val carAccessories: Button = findViewById(R.id.carAccessories)
-        val autoEngine: Button = findViewById(R.id.autoEngine)
-        val electricalSystem: Button = findViewById(R.id.electricalSystem)
-        val tireAccessories: Button = findViewById(R.id.tireAccessories)
+        val autoParts: Button = findViewById(R.id.autoPartsBmw)
+        val carAccessories: Button = findViewById(R.id.carAccessoriesBmw)
+        val autoEngine: Button = findViewById(R.id.autoEngineBmw)
+        val electricalSystem: Button = findViewById(R.id.electricalSystemBmw)
+        val tireAccessories: Button = findViewById(R.id.tireAccessoriesBmw)
 
         autoParts.setOnClickListener{
             val intent = Intent(this@Bmw, BmwAutoParts::class.java)
@@ -39,7 +38,7 @@ class Bmw : AppCompatActivity() {
             finish()
         }
         tireAccessories.setOnClickListener{
-            val intent = Intent(this@Bmw, TireAccessories::class.java)
+            val intent = Intent(this@Bmw, BmwTireAccessories::class.java)
             startActivity(intent)
             finish()
         }
