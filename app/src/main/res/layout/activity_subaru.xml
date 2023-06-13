@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,5 +7,164 @@
     tools:context=".ui.spareParts.subaru.Subaru">
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/subaru_air_cleaner"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/subaru_air_cleaner_kes_68_967"
+            app:layout_constraintEnd_toStartOf="@+id/subaru_brake_pads"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/subaru_air_cleaner" />
+        <Button
+            android:id="@+id/subaru_air_cleanerButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/subaru_air_cleaner_kes_68_967"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/subaru_brake_padsButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subaru_air_cleaner" />
+
+        <ImageView
+            android:id="@+id/subaru_brake_pads"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="32dp"
+            android:contentDescription="@string/subaru_brake_pads_kes_59_875"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/subaru_air_cleaner"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/subaru_brake_pads" />
+
+        <Button
+            android:id="@+id/subaru_brake_padsButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/subaru_brake_pads_kes_59_875"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.709"
+            app:layout_constraintStart_toEndOf="@+id/subaru_air_cleanerButton"
+            app:layout_constraintTop_toBottomOf="@+id/subaru_brake_pads" />
+
+
+
+
+        <ImageView
+            android:id="@+id/subaru_oil_filter"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/subaru_plugs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subaru_air_cleanerButton"
+            app:srcCompat="@drawable/subaru_oil_filter"
+            android:contentDescription="@string/subaru_oil_filter_kes_25_683" />
+
+        <Button
+            android:id="@+id/subaru_oil_filterButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/subaru_oil_filter_kes_25_683"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/subaru_plugsButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subaru_oil_filter" />
+
+        <ImageView
+            android:id="@+id/subaru_plugs"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/subaru_oil_filter"
+            app:layout_constraintTop_toBottomOf="@+id/subaru_brake_padsButton"
+            app:srcCompat="@drawable/subaru_plugs"
+            android:contentDescription="@string/toyota_lamps_kes_68_967" />
+
+
+
+        <Button
+            android:id="@+id/subaru_plugsButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:scrollbarSize="8dp"
+            android:text="@string/subaru_plugs_kes_5_785"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/subaru_oil_filterButton"
+            app:layout_constraintTop_toBottomOf="@+id/subaru_plugs" />
+
+        <ImageView
+            android:id="@+id/subaru_tail_light"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/subaru_tail_light_kes_9000"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:srcCompat="@drawable/subaru_tail_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subaru_oil_filterButton"/>
+
+        <Button
+            android:id="@+id/subaru_tail_lightButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:scrollbarSize="8dp"
+            android:text="@string/subaru_tail_light_kes_9000"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subaru_tail_light" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

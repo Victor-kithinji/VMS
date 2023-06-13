@@ -1,126 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.spareParts.audi.Audi">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/audiclutch"
         android:layout_height="159dp"
         android:layout_width="179dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintEnd_toStartOf="@+id/audiFilter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/audiclutch" />
+        app:srcCompat="@drawable/audiclutch"
+        android:contentDescription="@string/audi_clutch_kes_78_900" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/audiFilter"
         android:layout_width="179dp"
         android:layout_height="159dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/audiclutch"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/audifilter" />
+        app:srcCompat="@drawable/audifilter"
+        android:contentDescription="@string/audi_filter_kes_26_000" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/audiclutchButton"
         android:layout_width="179dp"
         android:layout_height="79dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Button"
-        app:layout_constraintEnd_toStartOf="@+id/button6"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        android:text="@string/audi_clutch_kes_78_900"
+        app:layout_constraintEnd_toStartOf="@+id/audiFilterButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/audiclutch" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/audiFilterButton"
         android:layout_width="179dp"
         android:layout_height="79dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:text="Button"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        android:text="@string/audi_filter_kes_26_000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.709"
-        app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintStart_toEndOf="@+id/audiclutchButton"
+        app:layout_constraintTop_toBottomOf="@+id/audiFilter" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/audiHeadlight"
         android:layout_width="179dp"
         android:layout_height="159dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintEnd_toStartOf="@+id/audiRadiator"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
-        app:srcCompat="@drawable/audiheadlight" />
+        app:layout_constraintTop_toBottomOf="@+id/audiclutchButton"
+        app:srcCompat="@drawable/audiheadlight"
+        android:contentDescription="@string/audi_headlight_kes_76_000" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/audiRadiator"
         android:layout_width="179dp"
         android:layout_height="159dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/button6"
-        app:srcCompat="@drawable/audiradiator" />
+        app:layout_constraintStart_toEndOf="@+id/audiHeadlight"
+        app:layout_constraintTop_toBottomOf="@+id/audiFilterButton"
+        app:srcCompat="@drawable/audiradiator"
+        android:contentDescription="@string/audi_radiator_kes_54_920" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/audiHeadlightButton"
         android:layout_width="179dp"
         android:layout_height="79dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
-        android:text="Button"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        android:text="@string/audi_headlight_kes_76_000"
+        app:layout_constraintEnd_toStartOf="@+id/audiRadiatorButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/audiHeadlight" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/audiRadiatorButton"
         android:layout_width="179dp"
         android:layout_height="79dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:text="Button"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        android:text="@string/audi_radiator_kes_54_920"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintStart_toEndOf="@+id/audiHeadlightButton"
+        app:layout_constraintTop_toBottomOf="@+id/audiRadiator" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/audiSparks"
         android:layout_width="179dp"
         android:layout_height="159dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7"
-        app:srcCompat="@drawable/audisparks" />
+        app:layout_constraintTop_toBottomOf="@+id/audiHeadlightButton"
+        app:srcCompat="@drawable/audisparks"
+        android:contentDescription="@string/audi_sparks_kes_22_000" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/audiSparksButton"
         android:layout_width="179dp"
         android:layout_height="79dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:text="Button"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        android:text="@string/audi_sparks_kes_22_000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/audiSparks" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

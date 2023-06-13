@@ -1,11 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.spareParts.nissan.Nissan">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/nissan_control_arm"
+        android:layout_width="179dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/nissan_control_arm_kes_9_999"
+        app:layout_constraintEnd_toStartOf="@+id/nissan_headlight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nissancontrolarm" />
+    <Button
+        android:id="@+id/nissan_control_armButton"
+        android:layout_width="179dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/nissan_control_arm_kes_9_999"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/nissan_headlightButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nissan_control_arm" />
+
+    <ImageView
+        android:id="@+id/nissan_headlight"
+        android:layout_width="179dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/nissan_headlight_kes_57_865"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nissan_control_arm"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nissanheadlight" />
+
+    <Button
+        android:id="@+id/nissan_headlightButton"
+        android:layout_width="179dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/nissan_headlight_kes_57_865"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintStart_toEndOf="@+id/nissan_control_armButton"
+        app:layout_constraintTop_toBottomOf="@+id/nissan_headlight" />
+
+
+    <ImageView
+        android:id="@+id/nissan_plug"
+        android:layout_width="179dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/nissan_plug_kes_7_698"
+        app:layout_constraintEnd_toStartOf="@+id/nissanTieRod"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nissan_control_armButton"
+        app:srcCompat="@drawable/nissanplug" />
+
+    <Button
+        android:id="@+id/nissan_plugButton"
+        android:layout_width="179dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/nissan_plug_kes_7_698"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/nissanTieRodButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nissan_plug" />
+
+    <ImageView
+        android:id="@+id/nissanTieRod"
+        android:layout_width="179dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nissan_plug"
+        app:layout_constraintTop_toBottomOf="@+id/nissan_headlightButton"
+        app:srcCompat="@drawable/nissantierod"
+        android:contentDescription="@string/nissan_tie_rod_kes_36_000"/>
+
+
+
+    <Button
+        android:id="@+id/nissanTieRodButton"
+        android:layout_width="179dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/white"
+        android:scrollbarSize="8dp"
+        android:text="@string/nissan_tie_rod_kes_36_000"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nissan_plugButton"
+        app:layout_constraintTop_toBottomOf="@+id/nissanTieRod" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>

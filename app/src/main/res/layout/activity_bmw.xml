@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +7,223 @@
     tools:context=".ui.spareParts.bmw.Bmw">
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/bmw_engine"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/bmw_engine_kes_368_967"
+            app:layout_constraintEnd_toStartOf="@+id/bmw_bonnet_hood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bmw_engine" />
+        <Button
+            android:id="@+id/bmw_engineButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/bmw_engine_kes_368_967"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/bmw_bonnet_hoodButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bmw_engine" />
+
+        <ImageView
+            android:id="@+id/bmw_bonnet_hood"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="32dp"
+            android:contentDescription="@string/bmw_bonnet_hood_kit_kes_97_000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bmw_engine"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bmw_bonnet_hood" />
+
+        <Button
+            android:id="@+id/bmw_bonnet_hoodButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/bmw_bonnet_hood_kes_59_875"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.709"
+            app:layout_constraintStart_toEndOf="@+id/bmw_engineButton"
+            app:layout_constraintTop_toBottomOf="@+id/bmw_bonnet_hood" />
+
+
+
+
+        <ImageView
+            android:id="@+id/bmw_air_cleaners"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/bmw_alternators"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bmw_engineButton"
+            app:srcCompat="@drawable/bmw_air_cleaners"
+            android:contentDescription="@string/bmw_air_cleaners_kes_29_875" />
+
+        <Button
+            android:id="@+id/bmw_air_cleanersButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/bmw_air_cleaners_kes_25_683"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/bmw_alternatorsButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bmw_air_cleaners" />
+
+        <ImageView
+            android:id="@+id/bmw_alternators"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bmw_air_cleaners"
+            app:layout_constraintTop_toBottomOf="@+id/bmw_bonnet_hoodButton"
+            app:srcCompat="@drawable/bmw_alternators"
+            android:contentDescription="@string/toyota_lamps_kes_68_967" />
+
+
+
+        <Button
+            android:id="@+id/bmw_alternatorsButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:scrollbarSize="8dp"
+            android:text="@string/bmw_alternators_kes_68_967"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bmw_air_cleanersButton"
+            app:layout_constraintTop_toBottomOf="@+id/bmw_alternators" />
+
+        <ImageView
+            android:id="@+id/bmw_headlights"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/bmw_headlights_kes_97_000"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:srcCompat="@drawable/bmw_headlights"
+            app:layout_constraintEnd_toStartOf="@+id/bmw_sensors"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bmw_air_cleanersButton"/>
+
+        <Button
+            android:id="@+id/bmw_headlightsButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:scrollbarSize="8dp"
+            android:text="@string/bmw_headlights_kes_97_000"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/bmw_sensorsButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bmw_headlights" />
+
+        <ImageView
+            android:id="@+id/bmw_sensors"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:srcCompat="@drawable/bmw_sensors"
+            app:layout_constraintStart_toEndOf="@id/bmw_headlights"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bmw_alternatorsButton"
+            android:contentDescription="@string/bmw_sensors_kes_49_000" />
+
+        <Button
+            android:id="@+id/bmw_sensorsButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/bmw_sensors_kes_49_000"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bmw_headlightsButton"
+            app:layout_constraintTop_toBottomOf="@+id/bmw_sensors" />
+
+        <ImageView
+            android:id="@+id/bmw_starter"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/bmw_starter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bmw_headlightsButton"
+            android:contentDescription="@string/bmw_starter_kes_24_805" />
+
+        <Button
+            android:id="@+id/bmw_starterButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:scrollbarSize="8dp"
+            android:text="@string/bmw_starter_kes_24_805"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bmw_starter" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

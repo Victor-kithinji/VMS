@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +7,102 @@
     tools:context=".ui.spareParts.suzuki.Suzuki">
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/suzuki_condesor"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/suzuki_condesor_kes_68_967"
+            app:layout_constraintEnd_toStartOf="@+id/suzukicatalyticconveter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/suzukicondesor" />
+        <Button
+            android:id="@+id/suzuki_condesorButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/suzuki_condesor_kes_68_967"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/suzukicatalyticconveterButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/suzuki_condesor" />
+
+        <ImageView
+            android:id="@+id/suzukicatalyticconveter"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="32dp"
+            android:contentDescription="@string/suzuki_catalytic_converter_kes_59_875"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/suzuki_condesor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/suzukicatalyticconveter" />
+
+        <Button
+            android:id="@+id/suzukicatalyticconveterButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/suzuki_catalytic_converter_kes_59_875"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.709"
+            app:layout_constraintStart_toEndOf="@+id/suzuki_condesorButton"
+            app:layout_constraintTop_toBottomOf="@+id/suzukicatalyticconveter" />
+
+
+
+
+        <ImageView
+            android:id="@+id/suzukialtenators"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/suzuki_condesorButton"
+            app:srcCompat="@drawable/suzukialtenators"
+            android:contentDescription="@string/suzuki_alternators_kes_25_683" />
+
+        <Button
+            android:id="@+id/suzukialtenatorsButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/suzuki_alternators_kes_25_683"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/suzukialtenators" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>

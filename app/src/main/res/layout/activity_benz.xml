@@ -7,6 +7,129 @@
     tools:context=".ui.spareParts.benz.Benz">
 
 
+    <ImageView
+        android:id="@+id/benzOilFilter"
+        android:layout_width="179dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/benz_oil_filter_kes_76_800"
+        app:layout_constraintEnd_toStartOf="@+id/benzSensors"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/benzoilfilter" />
+    <Button
+        android:id="@+id/benzOilFilterButton"
+        android:layout_width="179dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/benz_oil_filter_kes_76_800"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/benzSensorsButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/benzOilFilter" />
+
+    <ImageView
+        android:id="@+id/benzSensors"
+        android:layout_width="179dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/benz_sensors_kes_56_780"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/benzOilFilter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/benzsensor" />
+
+    <Button
+        android:id="@+id/benzSensorsButton"
+        android:layout_width="179dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/benz_sensors_kes_56_780"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.709"
+        app:layout_constraintStart_toEndOf="@+id/benzOilFilterButton"
+        app:layout_constraintTop_toBottomOf="@+id/benzSensors" />
+
+
+    <ImageView
+        android:id="@+id/benzWiperMotor"
+        android:layout_width="179dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/benz_wiper_motor_kes_92_000"
+        app:layout_constraintEnd_toStartOf="@+id/benzWipers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/benzOilFilterButton"
+        app:srcCompat="@drawable/benzwipermotor" />
+
+    <Button
+        android:id="@+id/benzWiperMotorButton"
+        android:layout_width="179dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/benz_wiper_motor_kes_92_000"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/benzWipersButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/benzWiperMotor" />
+
+    <ImageView
+        android:id="@+id/benzWipers"
+        android:layout_width="179dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/benzWiperMotor"
+        app:layout_constraintTop_toBottomOf="@+id/benzSensorsButton"
+        app:srcCompat="@drawable/benzwipers"
+        android:contentDescription="@string/benz_wipers_kes_22_000"/>
+
+
+
+    <Button
+        android:id="@+id/benzWipersButton"
+        android:layout_width="179dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/white"
+        android:scrollbarSize="8dp"
+        android:text="@string/benz_wipers_kes_22_000"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/benzWiperMotorButton"
+        app:layout_constraintTop_toBottomOf="@+id/benzWipers" />
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

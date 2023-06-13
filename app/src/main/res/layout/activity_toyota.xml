@@ -1,11 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.spareParts.toyota.Toyota">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/toyota_alternators"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/toyota_alternators_kes_47_000"
+            app:layout_constraintEnd_toStartOf="@+id/toyota_filter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/toyota_alternators" />
+
+        <ImageView
+            android:id="@+id/toyota_filter"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="32dp"
+            android:contentDescription="@string/toyota_air_filter_kes_29_875"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/toyota_alternators"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/toyota_filter" />
+
+        <Button
+            android:id="@+id/toyota_alternatorsButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/toyota_alternators_kes_47_000"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/toyota_filterButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toyota_alternators" />
+
+        <Button
+            android:id="@+id/toyota_filterButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/toyota_air_filter_kes_29_875"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.709"
+            app:layout_constraintStart_toEndOf="@+id/toyota_alternatorsButton"
+            app:layout_constraintTop_toBottomOf="@+id/toyota_filter" />
+
+        <ImageView
+            android:id="@+id/toyota_gasket"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/toyota_lamps"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toyota_alternatorsButton"
+            app:srcCompat="@drawable/toyota_gasket"
+            android:contentDescription="@string/toyota_gasket_kes_5_683" />
+
+        <ImageView
+            android:id="@+id/toyota_lamps"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/toyota_gasket"
+            app:layout_constraintTop_toBottomOf="@+id/toyota_filterButton"
+            app:srcCompat="@drawable/toyota_lamps"
+            android:contentDescription="@string/toyota_lamps_kes_68_967" />
+
+        <Button
+            android:id="@+id/toyota_gasketButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/toyota_gasket_kes_5_683"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/toyota_lampsButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toyota_gasket" />
+
+        <Button
+            android:id="@+id/toyota_lampsButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:scrollbarSize="8dp"
+            android:text="@string/toyota_lamps_kes_68_967"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/toyota_gasketButton"
+            app:layout_constraintTop_toBottomOf="@+id/toyota_lamps" />
+
+        <ImageView
+            android:id="@+id/toyota_tool_kit"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/toyota_toolkit_kes_97_000"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:srcCompat="@drawable/toyota_tool_kit"
+            app:layout_constraintEnd_toStartOf="@+id/toyota_side_mirrors"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toyota_gasketButton"/>
+
+        <Button
+            android:id="@+id/toyota_tool_kitButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:scrollbarSize="8dp"
+            android:text="@string/toyota_toolkit_kes_97_000"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/toyota_side_mirrorsButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toyota_tool_kit" />
+
+        <ImageView
+            android:id="@+id/toyota_side_mirrors"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:srcCompat="@drawable/toyota_side_mirrors"
+            app:layout_constraintStart_toEndOf="@id/toyota_tool_kit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toyota_lampsButton"
+            android:contentDescription="@string/toyota_side_mirrors_kes_49_000" />
+
+        <Button
+            android:id="@+id/toyota_side_mirrorsButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/toyota_side_mirrors_kes_49_000"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/toyota_tool_kitButton"
+            app:layout_constraintTop_toBottomOf="@+id/toyota_side_mirrors" />
+
+        <ImageView
+            android:id="@+id/toyota_piston"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/toyota_piston"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toyota_tool_kitButton"
+            android:contentDescription="@string/toyota_piston" />
+
+        <Button
+            android:id="@+id/toyota_pistonButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:scrollbarSize="8dp"
+            android:text="@string/toyota_piston_kes_4_805"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toyota_piston" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

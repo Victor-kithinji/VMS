@@ -1,11 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.spareParts.volkswagen.Volkswagen">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/volkswagenCleaners"
+        android:layout_height="159dp"
+        android:layout_width="179dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/volkswagenDoor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/volkswagen_cleaner"
+        android:contentDescription="@string/volkswagen_door_kes_24_530" />
+
+    <ImageView
+        android:id="@+id/volkswagenDoor"
+        android:layout_width="179dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/volkswagenCleaners"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/volkswagen_door"
+        android:contentDescription="@string/Volkswagen_air_cleaner_kes_38_000" />
+
+        <Button
+            android:id="@+id/volkswagenCleanersButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/Volkswagen_air_cleaner_kes_38_000"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/volkswagenDoorButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/volkswagenCleaners" />
+
+        <Button
+            android:id="@+id/volkswagenDoorButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/volkswagen_door_kes_24_530"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.709"
+            app:layout_constraintStart_toEndOf="@+id/volkswagenCleanersButton"
+            app:layout_constraintTop_toBottomOf="@+id/volkswagenDoor" />
+
+    <ImageView
+        android:id="@+id/volkswagenFogLight"
+        android:layout_width="179dp"
+        android:layout_height="159dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/volkswagenSensors"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volkswagenCleanersButton"
+        app:srcCompat="@drawable/volkswagen_fog_light"
+        android:contentDescription="@string/volkswagen_fog_lights_kes_76_200" />
+
+        <ImageView
+            android:id="@+id/volkswagenSensors"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/volkswagenFogLight"
+            app:layout_constraintTop_toBottomOf="@+id/volkswagenDoorButton"
+            app:srcCompat="@drawable/volkswagen_sensors"
+            android:contentDescription="@string/volkswagen_fog_lights_kes_76_200" />
+
+        <Button
+            android:id="@+id/volkswagenFogLightButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/volkswagen_fog_lights_kes_76_200"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/volkswagenSensorsButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/volkswagenFogLight" />
+
+        <Button
+            android:id="@+id/volkswagenSensorsButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:scrollbarSize="8dp"
+            android:text="@string/volkswagen_sensors_kes_8_765"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/volkswagenFogLightButton"
+            app:layout_constraintTop_toBottomOf="@+id/volkswagenSensors" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>

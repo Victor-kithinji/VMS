@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +7,131 @@
     tools:context=".ui.spareParts.isuzu.Isuzu">
 
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/isuzuCompressor"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/isuzu_compressor_kes_36_000"
+            app:layout_constraintEnd_toStartOf="@+id/isuzuFenders"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/isuzucompressor" />
+        <Button
+            android:id="@+id/isuzuCompressorButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/isuzu_compressor_kes_36_000"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/isuzuFendersButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/isuzuCompressor" />
+
+        <ImageView
+            android:id="@+id/isuzuFenders"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="32dp"
+            android:contentDescription="@string/isuzu_fenders_kes_20_200"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/isuzuCompressor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/isuzufenders" />
+
+        <Button
+            android:id="@+id/isuzuFendersButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/isuzu_fenders_kes_20_200"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.709"
+            app:layout_constraintStart_toEndOf="@+id/isuzuCompressorButton"
+            app:layout_constraintTop_toBottomOf="@+id/isuzuFenders" />
+
+
+        <ImageView
+            android:id="@+id/isuzuShift"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/isuzu_shift_kes_36_000"
+            app:layout_constraintEnd_toStartOf="@+id/isuzuWheel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/isuzuCompressorButton"
+            app:srcCompat="@drawable/isuzushift" />
+
+        <Button
+            android:id="@+id/isuzuShiftButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/isuzu_shift_kes_36_000"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/isuzuWheelButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/isuzuShift" />
+
+        <ImageView
+            android:id="@+id/isuzuWheel"
+            android:layout_width="179dp"
+            android:layout_height="159dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/isuzuShift"
+            app:layout_constraintTop_toBottomOf="@+id/isuzuFendersButton"
+            app:srcCompat="@drawable/isuzuwheel"
+            android:contentDescription="@string/isuzu_wheel_kes_23_870"/>
+
+
+
+        <Button
+            android:id="@+id/isuzuWheelButton"
+            android:layout_width="179dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/white"
+            android:scrollbarSize="8dp"
+            android:text="@string/isuzu_wheel_kes_23_870"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/isuzuShiftButton"
+            app:layout_constraintTop_toBottomOf="@+id/isuzuWheel" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
