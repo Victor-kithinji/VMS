@@ -10,104 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="737a92b1-aa99-403a-b69d-752ba36ae9c4" name="Changes" comment="Vehicle Maintenance System">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/benzoilfilter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/benzsensor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/benzwipermotor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/benzwipers.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bmw_air_cleaners.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bmw_alternators.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bmw_bonnet_hood.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bmw_engine.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bmw_headlights.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bmw_radiator_grills.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bmw_sensors.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/bmw_starter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/fordcondesor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/fordfanspround.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/fordfrontdoor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/fordsparetank.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/hondadoormotor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/hondaplugs.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/hondastabilelink.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/isuzucompressor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/isuzufenders.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/isuzushift.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/isuzuwheel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mazdaairfilter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mazdabrakespads.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mazdaplugs.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mazdasensors.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mazdastabilitylink.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mitsubishiblowermotor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mitsubishiignitioncoil.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mitsubishiradiator.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mitsubishishaft.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/mitsubishispeedometer.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/nissancontrolarm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/nissanheadlight.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/nissanplug.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/nissantierod.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/peugoutbonnethood.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/peugoutcondesor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/peugoutdoorautoglass.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/peugoutfenders.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/peugoutfuelinjectors.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/subaru_air_cleaner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/subaru_brake_pads.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/subaru_oil_filter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/subaru_plugs.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/subaru_tail_light.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/suzukialtenators.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/suzukicatalyticconveter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/suzukicondesor.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/toyota_alternators.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/toyota_filter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/toyota_gasket.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/toyota_lamps.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/toyota_piston.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/toyota_side_mirrors.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/toyota_tool_kit.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/volkswagen_cleaner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/volkswagen_door.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/volkswagen_fog_light.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/volkswagen_sensors.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/mechanicNavigationBar/CompleteActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/mechanicNavigationBar/MechanicProfile.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/mechanicNavigationBar/MechanicRate.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_dashboard.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_email.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_complete.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mechanic_profile.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mechanic_rate.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/audi/Audi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/audi/Audi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/benz/Benz.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/benz/Benz.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/bmw/Bmw.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/bmw/Bmw.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/ford/Ford.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/ford/Ford.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/honda/Honda.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/honda/Honda.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/isuzu/Isuzu.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/isuzu/Isuzu.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/mazda/Mazda.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/mazda/Mazda.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/mitsubishi/Mitsubishi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/mitsubishi/Mitsubishi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/nissan/Nissan.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/nissan/Nissan.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/peugeot/Peugeot.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/peugeot/Peugeot.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/subaru/Subaru.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/subaru/Subaru.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/suzuki/Suzuki.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/suzuki/Suzuki.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/toyota/Toyota.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/toyota/Toyota.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/volkswagen/Volkswagen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/spareParts/volkswagen/Volkswagen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_audi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_audi.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_benz.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_benz.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_bmw.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_bmw.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ford.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ford.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_honda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_honda.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_isuzu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_isuzu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_mazda.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mazda.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_mitsubishi.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mitsubishi.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_nissan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_nissan.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_peugeot.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_peugeot.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_subaru.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_subaru.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_suzuki.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_suzuki.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_toyota.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_toyota.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_volkswagen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_volkswagen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/dashboard/MechanicDashboard.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/dashboard/MechanicDashboard.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/dataSource/TaskDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/dataSource/TaskDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/extensions/AppExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/mechanicLogin/extensions/AppExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/userNavigationBar/AddTaskActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/userNavigationBar/AddTaskActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/userNavigationBar/TaskListAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/userNavigationBar/TaskListAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/userNavigationBar/UserProfile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/vms/ui/userNavigationBar/UserProfile.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_mechanic_dashboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mechanic_dashboard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dashboard.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_notifications.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/activity_mechanic_drawer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/activity_mechanic_drawer.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -193,6 +117,20 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="android.template.-1737852405">
+      <recent name="com.example.vms.ui.userMechanic" />
+      <recent name="com.example.vms.ui.UserNavigationBar" />
+    </key>
+    <key name="android.template.1586061648">
+      <recent name="com.example.vms.ui.spareParts.bmw" />
+    </key>
+    <key name="android.template.-614440783">
+      <recent name="com.example.vms.ui.spareParts.bmw" />
+      <recent name="com.example.vms.ui.spareParts.benz" />
+      <recent name="com.example.vms.ui.spareParts.audi" />
+      <recent name="com.example.vms.ui.honda" />
+      <recent name="com.example.vms.ui.peugeot" />
+    </key>
     <key name="android.template.-476215087">
       <recent name="com.example.vms.ui.userNavigationBar" />
     </key>
@@ -223,22 +161,8 @@
       <recent name="com.example.vms.ui.spareParts.peugeot" />
       <recent name="com.example.vms.ui.spareParts.nissan" />
     </key>
-    <key name="android.template.-1737852405">
-      <recent name="com.example.vms.ui.userMechanic" />
-      <recent name="com.example.vms.ui.UserNavigationBar" />
-    </key>
-    <key name="android.template.1586061648">
-      <recent name="com.example.vms.ui.spareParts.bmw" />
-    </key>
     <key name="android.template.2138966899">
       <recent name="com.example.vms.ui.dashboard" />
-    </key>
-    <key name="android.template.-614440783">
-      <recent name="com.example.vms.ui.spareParts.bmw" />
-      <recent name="com.example.vms.ui.spareParts.benz" />
-      <recent name="com.example.vms.ui.spareParts.audi" />
-      <recent name="com.example.vms.ui.honda" />
-      <recent name="com.example.vms.ui.peugeot" />
     </key>
   </component>
   <component name="RunManager">

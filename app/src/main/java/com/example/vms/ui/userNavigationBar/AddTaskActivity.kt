@@ -5,8 +5,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vms.databinding.ActivityAddTaskBinding
 import com.example.vms.ui.dataSource.TaskDataSource
-import com.example.vms.ui.extensions.format
-import com.example.vms.ui.extensions.text
+import com.example.vms.ui.mechanicLogin.extensions.format
+import com.example.vms.ui.mechanicLogin.extensions.text
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
