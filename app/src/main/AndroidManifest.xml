@@ -144,7 +144,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ui.userNavigationBar.Brands"
+            android:name=".ui.spareParts.SpareParts"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -3,6 +3,7 @@ package com.example.addcart.roomdatabase
 import android.arch.persistence.room.Dao
 import android.arch.persistence.room.Insert
 import android.arch.persistence.room.Query
+import com.example.vms.ui.spareParts.roomdatabase.Cart
 
 @Dao
 interface CartDao{

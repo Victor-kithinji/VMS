@@ -1,7 +1,7 @@
 package com.example.vms.ui.userNavigationBar
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.vms.R
 
 class Rate : AppCompatActivity() {

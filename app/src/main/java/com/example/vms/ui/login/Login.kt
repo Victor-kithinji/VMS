@@ -19,7 +19,7 @@ class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        val button2: Button =findViewById(R.id.button)
+        val button2: Button = findViewById(R.id.button)
         val password2: EditText = findViewById(R.id.editTextTextPassword2)
         val emailAddress: EditText = findViewById(R.id.textView)
         val textView2: TextView = findViewById(R.id.dontHaveaccountText)
@@ -38,29 +38,35 @@ class Login : AppCompatActivity() {
                 password2.error = ("Empty Password")
             } else if (password.length < 8) {
                 password2.error = ("Too weak password, use 8 characters")
-            }else{
-                firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        goToMain()
+            } else {
+                firebaseAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            goToMain()
 
-                firebaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        val intent = Intent(this@Login, UserDashboard::class.java)
-                        startActivity(intent)
-                        finish()
+                            firebaseAuth.signInWithEmailAndPassword(email, password)
+                                .addOnCompleteListener { task ->
+                                    if (task.isSuccessful) {
+                                        val intent = Intent(this@Login, UserDashboard::class.java)
+                                        startActivity(intent)
+                                        finish()
 
+                                    }
+                                }.addOnFailureListener { exception ->
+                                Toast.makeText(
+                                    applicationContext,
+                                    exception.localizedMessage,
+                                    Toast.LENGTH_LONG
+                                ).show()
+                            }
+                        }
                     }
-                }.addOnFailureListener { exception ->
-                    Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG).show()
+                textView2.setOnClickListener {
+                    val intent = Intent(this@Login, Register::class.java)
+                    startActivity(intent)
+                    finish()
                 }
             }
-        }
-        textView2.setOnClickListener {
-            val intent =Intent(this@Login, Register::class.java)
-            startActivity(intent)
-            finish()
-        }
-    }
 
         }
     }

@@ -31,7 +31,7 @@ class UserProfile : AppCompatActivity() {
         val logout: ImageView = findViewById(R.id.logout2)
 
 
-        logout.setOnClickListener{
+        logout.setOnClickListener {
             goToLogout()
         }
         val user = Firebase.auth.currentUser

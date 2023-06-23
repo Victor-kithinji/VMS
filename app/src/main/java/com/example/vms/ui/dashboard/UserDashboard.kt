@@ -10,8 +10,8 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.vms.R
 import com.example.vms.ui.login.Login
+import com.example.vms.ui.spareParts.SpareParts
 import com.example.vms.ui.userNavigationBar.Rate
-import com.example.vms.ui.userNavigationBar.Brands
 import com.example.vms.ui.userNavigationBar.UserNotification
 import com.example.vms.ui.userNavigationBar.UserProfile
 import com.google.android.gms.maps.GoogleMap
@@ -117,25 +117,26 @@ class UserDashboard : AppCompatActivity() {
     }
 
     private fun goToSpareParts() {
-        val intent = Intent(this@UserDashboard, Brands::class.java)
+        val intent = Intent(this@UserDashboard, SpareParts::class.java)
         startActivity(intent)
         finish()
     }
 
     private fun goToRate() {
-            val intent = Intent(this@UserDashboard, Rate::class.java)
-            startActivity(intent)
-            finish()
+        val intent = Intent(this@UserDashboard, Rate::class.java)
+        startActivity(intent)
+        finish()
 
-        }
+    }
 
-        private fun goToUserProfile() {
-            val intent = Intent(this@UserDashboard, UserProfile::class.java)
-            startActivity(intent)
-            finish()
+    private fun goToUserProfile() {
+        val intent = Intent(this@UserDashboard, UserProfile::class.java)
+        startActivity(intent)
+        finish()
 
-        }
-    private fun goToUserNotification(){
+    }
+
+    private fun goToUserNotification() {
         val intent = Intent(this@UserDashboard, UserNotification::class.java)
         startActivity(intent)
         finish()

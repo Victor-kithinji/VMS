@@ -34,7 +34,7 @@ class MechanicRate : AppCompatActivity() {
             }
         }
 
-        val btnSurprise:Button = findViewById(R.id.btnSurprise)
+        val btnSurprise: Button = findViewById(R.id.btnSurprise)
         btnSurprise.setOnClickListener {
             startActivityForResult(
                 Intent(this, CompleteActivity::class.java),

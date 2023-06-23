@@ -13,14 +13,14 @@ import com.example.vms.R
 import com.example.vms.ui.login.Login
 import com.example.vms.ui.mechanicNavigationBar.MechanicProfile
 import com.example.vms.ui.mechanicNavigationBar.MechanicRate
-import com.example.vms.ui.userNavigationBar.Brands
+import com.example.vms.ui.spareParts.SpareParts
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 
-class MechanicDashboard : AppCompatActivity(){
+class MechanicDashboard : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var actionBarToggle: ActionBarDrawerToggle
     private lateinit var map: GoogleMap
@@ -30,7 +30,7 @@ class MechanicDashboard : AppCompatActivity(){
     private var dbReference: DatabaseReference = database.getReference("test")
     private lateinit var findLocationButton: Button
 
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mechanic_dashboard)
@@ -119,7 +119,7 @@ class MechanicDashboard : AppCompatActivity(){
     }
 
     private fun goToSpareParts() {
-        val intent = Intent(this@MechanicDashboard, Brands::class.java)
+        val intent = Intent(this@MechanicDashboard, SpareParts::class.java)
         startActivity(intent)
         finish()
     }

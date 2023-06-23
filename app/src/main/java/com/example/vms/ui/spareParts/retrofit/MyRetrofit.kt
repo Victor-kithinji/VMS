@@ -1,5 +1,6 @@
-package com.example.addcart.retrofit
+package com.example.vms.ui.spareParts.retrofit
 
+import com.example.vms.ui.spareParts.retrofit.CartApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

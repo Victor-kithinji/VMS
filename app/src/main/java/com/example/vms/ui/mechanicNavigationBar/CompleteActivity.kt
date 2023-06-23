@@ -11,7 +11,7 @@ class CompleteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_complete)
 
-        val btnGoBack:Button =findViewById(R.id.btnGoBack)
+        val btnGoBack: Button = findViewById(R.id.btnGoBack)
         btnGoBack.setOnClickListener {
             setResult(Activity.RESULT_OK)
             finish()

@@ -1,6 +1,6 @@
-package com.example.addcart.retrofit
+package com.example.vms.ui.spareParts.retrofit
 
-import com.example.addcart.model.MyProductData
+import com.example.vms.ui.model.MyProductData
 import retrofit2.Call
 
 import retrofit2.http.GET

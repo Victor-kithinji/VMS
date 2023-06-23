@@ -19,14 +19,14 @@ class MechanicLoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mechanic_login)
-        val emailAddress: EditText =findViewById(R.id.editTextEmailAddressText)
+        val emailAddress: EditText = findViewById(R.id.editTextEmailAddressText)
         val mechanicPassword: EditText = findViewById(R.id.editTextPassword)
         val mechanicLogin: Button = findViewById(R.id.mechanicLogin)
         val accountLabel: TextView = findViewById(R.id.accountText)
 
         firebaseAuth = FirebaseAuth.getInstance()
 
-        fun login(){
+        fun login() {
             val email = emailAddress.text.toString()
             val password = mechanicPassword.text.toString()
             if (email.isEmpty()) {
@@ -35,15 +35,20 @@ class MechanicLoginActivity : AppCompatActivity() {
                 mechanicPassword.error = ("Empty Password")
             } else if (password.length < 8) {
                 mechanicPassword.error = ("Too weak password, use 8 characters")
-            }else{
-                firebaseAuth!!.signInWithEmailAndPassword(email,password).addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        val intent = Intent(this, MechanicDashboard::class.java)
-                        startActivity(intent)
-                        finish()
-                    }
-                }.addOnFailureListener { exception ->
-                    Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG).show()
+            } else {
+                firebaseAuth!!.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            val intent = Intent(this, MechanicDashboard::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
+                    }.addOnFailureListener { exception ->
+                    Toast.makeText(
+                        applicationContext,
+                        exception.localizedMessage,
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
             }
         }

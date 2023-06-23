@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.addcart.databinding.SparePartRowBinding
-import com.example.addcart.model.MyProductData
+import com.example.vms.databinding.SparePartRowBinding
+import com.example.vms.ui.model.MyProductData
 
 
 class SparePartsAdapter (private val onClickListener: OnClickListener) : androidx.recyclerview.widget.ListAdapter<MyProductData, SparePartsAdapter.MyViewHolder>(MyDiffUtil) {

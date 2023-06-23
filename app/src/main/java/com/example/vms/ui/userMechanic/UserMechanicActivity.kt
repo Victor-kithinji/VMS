@@ -17,7 +17,7 @@ class UserMechanicActivity : AppCompatActivity() {
         val userButton: Button = findViewById(R.id.userButton)
         val mechanic: Button = findViewById(R.id.mechanicButton)
 
-        userButton. setOnClickListener{
+        userButton.setOnClickListener {
             val intent = Intent(this@UserMechanicActivity, Login::class.java)
             startActivity(intent)
             finish()

@@ -1,4 +1,4 @@
-package com.example.addcart.roomdatabase
+package com.example.vms.ui.spareParts.roomdatabase
 
 import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity

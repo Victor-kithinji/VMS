@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase
 
 class Register : AppCompatActivity() {
 
-    private lateinit var firebaseAuth:FirebaseAuth
+    private lateinit var firebaseAuth: FirebaseAuth
 
     private lateinit var databaseReference: DatabaseReference
 
@@ -32,7 +32,7 @@ class Register : AppCompatActivity() {
 
         val alreadyHaveAccount: TextView = findViewById(R.id.alreadyHaveAccount)
 
-         firebaseAuth = FirebaseAuth.getInstance()
+        firebaseAuth = FirebaseAuth.getInstance()
         databaseReference = FirebaseDatabase.getInstance().getReference("Users")
 
 
@@ -70,21 +70,25 @@ class Register : AppCompatActivity() {
                         }
 
                     }.addOnFailureListener { exception ->
-                        Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG).show()
+                        Toast.makeText(
+                            applicationContext,
+                            exception.localizedMessage,
+                            Toast.LENGTH_LONG
+                        ).show()
                     }
 
-        alreadyHaveAccount.setOnClickListener {
-            val intent = Intent(this@Register, Login::class.java)
-            startActivity(intent)
-            finish()
-        }
+                alreadyHaveAccount.setOnClickListener {
+                    val intent = Intent(this@Register, Login::class.java)
+                    startActivity(intent)
+                    finish()
+                }
 
-        alreadyHaveAccount.setOnClickListener {
-            val intent = Intent(this@Register, Login::class.java)
-            startActivity(intent)
-            finish()
-        }
-    }
+                alreadyHaveAccount.setOnClickListener {
+                    val intent = Intent(this@Register, Login::class.java)
+                    startActivity(intent)
+                    finish()
+                }
+            }
         }
     }
 

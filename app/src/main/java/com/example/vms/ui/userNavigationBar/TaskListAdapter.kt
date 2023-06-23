@@ -10,7 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.vms.R
 import com.example.vms.databinding.ItemTaskBinding
 
-class TaskListAdapter : ListAdapter<com.example.vms.ui.model.Task, TaskListAdapter.TaskViewHolder>(DiffCallback()) {
+class TaskListAdapter :
+    ListAdapter<com.example.vms.ui.model.Task, TaskListAdapter.TaskViewHolder>(DiffCallback()) {
 
     var listenerEdit: (com.example.vms.ui.model.Task) -> Unit = {}
     var listenerDelete: (com.example.vms.ui.model.Task) -> Unit = {}
@@ -56,6 +57,13 @@ class TaskListAdapter : ListAdapter<com.example.vms.ui.model.Task, TaskListAdapt
 }
 
 class DiffCallback : DiffUtil.ItemCallback<com.example.vms.ui.model.Task>() {
-    override fun areItemsTheSame(oldItem: com.example.vms.ui.model.Task, newItem: com.example.vms.ui.model.Task) = oldItem == newItem
-    override fun areContentsTheSame(oldItem: com.example.vms.ui.model.Task, newItem: com.example.vms.ui.model.Task) = oldItem.id == newItem.id
+    override fun areItemsTheSame(
+        oldItem: com.example.vms.ui.model.Task,
+        newItem: com.example.vms.ui.model.Task
+    ) = oldItem == newItem
+
+    override fun areContentsTheSame(
+        oldItem: com.example.vms.ui.model.Task,
+        newItem: com.example.vms.ui.model.Task
+    ) = oldItem.id == newItem.id
 }
