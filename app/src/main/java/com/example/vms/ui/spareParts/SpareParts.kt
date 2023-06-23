@@ -1,13 +1,13 @@
 package com.example.vms.ui.spareParts
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.drawToBitmap
 import com.example.vms.R
 import com.example.vms.databinding.ActivityMainBinding
 import com.example.vms.ui.model.MyProductData
@@ -23,6 +23,7 @@ class SpareParts : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = com.example.vms.databinding.ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         adapter = SparePartsAdapter(SparePartsAdapter.OnClickListener { spare->
@@ -31,13 +32,13 @@ class SpareParts : AppCompatActivity() {
 
             val intent1= Intent(this,AddToCartActivity::class.java).also {
 
-                val name = findViewById<TextView>(R.id.productName)
-                val price = findViewById<TextView>(R.id.productPrice)
-                val image= findViewById<ImageView>(R.id.imageSparePart)
+                val name = findViewById<TextView?>(R.id.productName)
+                val price = findViewById<TextView?>(R.id.productPrice)
+                val image= findViewById<ImageView?>(R.id.imageSparePart)
 
-                it.putExtra("Name",name.text.toString())
-                it.putExtra("Price",price.text.toString())
-                it.putExtra("Image",image.drawToBitmap())
+                it.putExtra("Name",spare.name)
+                Uri.parse(spare.imageId) // A)
+                it.putExtra("Price",spare.price)
                 startActivity(it);
             }
         })

@@ -1,14 +1,15 @@
 package com.example.vms.ui.spareParts
 
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.addcart.roomdatabase.MyDatabase
 import com.example.vms.R
 import com.example.vms.ui.spareParts.roomdatabase.Cart
+import com.example.vms.ui.spareParts.roomdatabase.MyDatabase
 
 class AddToCartActivity : AppCompatActivity() {
 
@@ -18,17 +19,20 @@ class AddToCartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_to_cart)
 
-        val imageId: ImageView = findViewById(R.id.productImage)
+        var imageId: ImageView = findViewById(R.id.productImage)
         val pname: TextView = findViewById(R.id.productName)
         val price: TextView = findViewById(R.id.productPrice)
 
 
-        val nameNew = intent.getStringExtra("Name")
+       val sparePartsName = intent.getStringExtra("Name")
         val priceNew = intent.getStringExtra("Price")
         val imageNew = intent.getStringExtra("Image")
 
-        pname.text = priceNew
+        pname.text = sparePartsName
         price.text = priceNew
+
+        val imageUri = intent.getParcelableExtra<Uri>("spare.imageId")
+        imageId.setImageURI(imageUri)
 
 
         val addToCart: Button = findViewById(R.id.addToCartBtn)
