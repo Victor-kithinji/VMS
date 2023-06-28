@@ -1,7 +1,6 @@
 package com.example.vms.ui.spareParts
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
@@ -37,7 +36,10 @@ class SpareParts : AppCompatActivity() {
                 val image= findViewById<ImageView?>(R.id.imageSparePart)
 
                 it.putExtra("Name",spare.name)
-                Uri.parse(spare.imageId) // A)
+//                Uri.parse(spare.imageId)
+                val intent = Intent(this, AddToCartActivity::class.java)
+                intent.putExtra("imageUri", image.toString())
+                startActivity(intent)
                 it.putExtra("Price",spare.price)
                 startActivity(it);
             }

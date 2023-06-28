@@ -146,4 +146,5 @@
     <string name="submit">SUBMIT</string>
     <string name="email2">Email</string>
     <string name="click_rate">Click rate!</string>
+    <string name="checkout">CheckOut</string>
 </resources>

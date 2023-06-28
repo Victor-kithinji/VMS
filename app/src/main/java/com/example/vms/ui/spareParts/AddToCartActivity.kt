@@ -13,6 +13,7 @@ import com.example.vms.ui.spareParts.roomdatabase.MyDatabase
 
 class AddToCartActivity : AppCompatActivity() {
 
+    private lateinit var imageView: ImageView
 
     private val myDatabase: MyDatabase? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,16 +25,24 @@ class AddToCartActivity : AppCompatActivity() {
         val price: TextView = findViewById(R.id.productPrice)
 
 
-       val sparePartsName = intent.getStringExtra("Name")
+        val sparePartsName = intent.getStringExtra("Name")
         val priceNew = intent.getStringExtra("Price")
         val imageNew = intent.getStringExtra("Image")
 
         pname.text = sparePartsName
         price.text = priceNew
 
-        val imageUri = intent.getParcelableExtra<Uri>("spare.imageId")
-        imageId.setImageURI(imageUri)
+//        val imageUri = intent.getParcelableExtra<Uri>("spare.imageId")
+//        imageId.setImageURI(imageUri)
 
+        imageView = findViewById(R.id.productImage)
+
+        // Get the image URI from the intent
+        val imageUriString = intent.getStringExtra("imageUri")
+        val imageUri = Uri.parse(imageUriString)
+
+        // Load the image into the ImageView
+        imageView.setImageURI(imageUri)
 
         val addToCart: Button = findViewById(R.id.addToCartBtn)
 
