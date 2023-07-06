@@ -2,9 +2,12 @@ package com.example.vms.ui.dashboard
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.location.Location
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -13,6 +16,7 @@ import com.example.vms.R
 import com.example.vms.ui.login.Login
 import com.example.vms.ui.mechanicNavigationBar.MechanicProfile
 import com.example.vms.ui.mechanicNavigationBar.MechanicRate
+import com.example.vms.ui.model.LocationInfo
 import com.example.vms.ui.spareParts.SpareParts
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.material.navigation.NavigationView
@@ -26,9 +30,10 @@ class MechanicDashboard : AppCompatActivity() {
     private lateinit var map: GoogleMap
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var navView: NavigationView
-    private var database: FirebaseDatabase = FirebaseDatabase.getInstance()
-    private var dbReference: DatabaseReference = database.getReference("test")
+
     private lateinit var findLocationButton: Button
+
+    private lateinit var location: Location
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +42,38 @@ class MechanicDashboard : AppCompatActivity() {
 
         drawerLayout = findViewById(R.id.drawerLayout)
         val ivMenu: ImageButton = findViewById(R.id.imMenu)
+
+
+
+
+        // Obtain a reference to the Firebase Realtime Database
+        val database = FirebaseDatabase.getInstance()
+        val locationRef = database.reference.child("user-location")
+
+
+        val lat = findViewById<TextView>(R.id.latitude)
+        val longT = findViewById<TextView>(R.id.longitude)
+
+        // Retrieve location data from Firebase
+        locationRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (locationSnapshot in dataSnapshot.children) {
+                    val latitude = locationSnapshot.child("latitude").getValue(LocationInfo::class.java)
+                    val longitude = locationSnapshot.child("longitude").getValue(LocationInfo::class.java)
+
+                    // Update Client Location
+                    if (latitude != null && longitude != null) {
+                        longT.text = longitude.toString()
+                        lat.text = latitude.toString()
+                    }
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(applicationContext,error.message ?: "Server error occurred.",Toast.LENGTH_SHORT).show()
+            }
+        })
+
         ivMenu.setOnClickListener {
 
             drawerLayout.openDrawer(GravityCompat.START)
@@ -107,7 +144,6 @@ class MechanicDashboard : AppCompatActivity() {
 
         }
     }
-
     @SuppressLint("ResourceType")
     private fun goToShare() {
         val intent = Intent(Intent.ACTION_SEND)

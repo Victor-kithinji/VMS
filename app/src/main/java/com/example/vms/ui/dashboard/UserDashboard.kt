@@ -2,7 +2,9 @@ package com.example.vms.ui.dashboard
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.location.Location
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -14,26 +16,77 @@ import com.example.vms.ui.spareParts.SpareParts
 import com.example.vms.ui.userNavigationBar.Rate
 import com.example.vms.ui.userNavigationBar.UserNotification
 import com.example.vms.ui.userNavigationBar.UserProfile
-import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.*
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
-class UserDashboard : AppCompatActivity() {
+class UserDashboard : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var actionBarToggle: ActionBarDrawerToggle
     private lateinit var navView: NavigationView
-    private lateinit var map: GoogleMap
     private lateinit var firebaseAuth: FirebaseAuth
+    private lateinit var databaseReference: DatabaseReference
+    private var  location : Location? = null
 
+    private val LOCATION_PERMISSION_REQUEST_CODE = 1
 
-    @SuppressLint("MissingInflatedId")
+    private lateinit var mapView: MapView
+    private lateinit var googleMap: GoogleMap
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_dashboard)
 
 
+        val latitude = location?.latitude
+        val longitude = location?.longitude
+
+        databaseReference = FirebaseDatabase.getInstance().reference
+
+        val locationRef = databaseReference.child("user-location")
+
         drawerLayout = findViewById(R.id.drawerLayout)
         val ivMenu: ImageButton = findViewById(R.id.IvMenu)
+
+        val saveLocationInfo = findViewById<Button>(R.id.btn_find_location)
+
+
+        val location = latitude?.let {
+            if (longitude != null) {
+                LatLng(it, longitude)
+            }
+        }
+
+
+        mapView = findViewById(R.id.mapView)
+        mapView.onCreate(savedInstanceState)
+        mapView.getMapAsync(this)
+
+
+
+//        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+//            == PackageManager.PERMISSION_GRANTED) {
+//
+//            initializeMap()
+//        } else {
+//            // Location permission is not granted, request the permission
+//            ActivityCompat.requestPermissions(
+//                this,
+//                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+//                LOCATION_PERMISSION_REQUEST_CODE
+//            )
+//        }
+
+
+        // Button to save location to db
+        saveLocationInfo.setOnClickListener {
+            locationRef.push().setValue(location)
+        }
 
         ivMenu.setOnClickListener {
 
@@ -106,11 +159,13 @@ class UserDashboard : AppCompatActivity() {
         }
     }
 
+
+
     @SuppressLint("ResourceType")
     private fun goToShare() {
         val intent = Intent(android.content.Intent.ACTION_SEND)
-        val shareBody = "Here is the share content body"
-        intent.type = "text/plain"
+        val shareBody = "Hello, I found a Super app"
+        intent.type = "text/email"
         intent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(2))
         intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody)
         startActivity(Intent.createChooser(intent, getString(2)))
@@ -140,5 +195,50 @@ class UserDashboard : AppCompatActivity() {
         val intent = Intent(this@UserDashboard, UserNotification::class.java)
         startActivity(intent)
         finish()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        mapView.onStart()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mapView.onResume()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mapView.onPause()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        mapView.onStop()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mapView.onDestroy()
+    }
+
+    override fun onLowMemory() {
+        super.onLowMemory()
+        mapView.onLowMemory()
+    }
+
+    override fun onMapReady(map: GoogleMap) {
+        googleMap = map
+
+        val latitude = 0.557890
+        val longitude = 34.55600
+        val location = LatLng(latitude, longitude)
+        googleMap.addMarker(
+            MarkerOptions().position(location)
+                .title("You are here. Please check your nearest Mechanic")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+        )
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(location))
+
     }
 }

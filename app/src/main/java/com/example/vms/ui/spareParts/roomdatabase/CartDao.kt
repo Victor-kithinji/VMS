@@ -2,22 +2,20 @@ package com.example.vms.ui.spareParts.roomdatabase
 
 import androidx.room.Dao
 import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.vms.ui.spareParts.roomdatabase.Cart
+import kotlinx.coroutines.flow.Flow
+
 
 @Dao
 interface CartDao{
-   @Insert
+
+   @Insert(onConflict = OnConflictStrategy.REPLACE)
    fun addToCart(cart: Cart)
 
     @Query("SELECT * FROM MyCart")
-    fun getCarts():List<Cart>
+    fun getCarts(): Flow<List<Cart>>
 
-    @Query("SELECT EXISTS (SELECT 1 FROM MyCart WHERE id=:id)")
-    fun isAddToCart(id:Int)
-
-    @Query("select COUNT (*) from MyCart")
-    fun countCart()
     @Query("DELETE FROM MyCart WHERE id=:id ")
     fun deleteItem(id:Int)
 

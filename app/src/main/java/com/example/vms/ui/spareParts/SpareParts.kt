@@ -8,7 +8,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vms.R
-import com.example.vms.databinding.ActivityMainBinding
+import com.example.vms.databinding.ActivitySparePartsBinding
 import com.example.vms.ui.model.MyProductData
 import com.example.vms.ui.spareParts.addcart.SparePartsAdapter
 import com.example.vms.ui.spareParts.retrofit.MyRetrofit
@@ -16,29 +16,41 @@ import retrofit2.Call
 import retrofit2.Response
 
 class SpareParts : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivitySparePartsBinding
 //    val adapter by lazy { SparePartsAdapter()}
     private lateinit var adapter: SparePartsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = com.example.vms.databinding.ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivitySparePartsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        supportActionBar?.hide()
+
+
+        binding.iVallCarts.setOnClickListener {
+            startActivity(Intent(this@SpareParts,SpareCartActivity::class.java))
+            finish()
+        }
+
+
 
         adapter = SparePartsAdapter(SparePartsAdapter.OnClickListener { spare->
             Log.i(TAG,spare.name)
 
 
-            val intent1= Intent(this,AddToCartActivity::class.java).also {
+            val intent = Intent(this,AddToCartActivity::class.java).also {
 
                 val name = findViewById<TextView?>(R.id.productName)
                 val price = findViewById<TextView?>(R.id.productPrice)
                 val image= findViewById<ImageView?>(R.id.imageSparePart)
 
+
                 it.putExtra("Name",spare.name)
 //                Uri.parse(spare.imageId)
-                val intent = Intent(this, AddToCartActivity::class.java)
-                intent.putExtra("imageUri", image.toString())
+
+//
+                it.putExtra("imageUri", image.toString())
                 startActivity(intent)
                 it.putExtra("Price",spare.price)
                 startActivity(it);
@@ -69,6 +81,6 @@ class SpareParts : AppCompatActivity() {
     }
 
     companion object {
-        const val TAG = "MainActivity"
+        const val TAG = "SpareParts"
     }
 }

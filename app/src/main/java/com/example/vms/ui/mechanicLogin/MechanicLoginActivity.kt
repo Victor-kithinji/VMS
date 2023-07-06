@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vms.R
 import com.example.vms.ui.dashboard.MechanicDashboard
-import com.example.vms.ui.mechanicRegister.MechanicRegisterActivity
+import com.example.vms.ui.spareParts.mechanicRegister.MechanicRegisterActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class MechanicLoginActivity : AppCompatActivity() {
