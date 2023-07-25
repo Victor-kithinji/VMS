@@ -10,12 +10,17 @@ import com.example.vms.ui.mechanicLogin.MechanicLoginActivity
 
 class UserMechanicActivity : AppCompatActivity() {
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_mechanic)
 
         val userButton: Button = findViewById(R.id.userButton)
         val mechanic: Button = findViewById(R.id.mechanicButton)
+
+
+
 
         userButton.setOnClickListener {
             val intent = Intent(this@UserMechanicActivity, Login::class.java)

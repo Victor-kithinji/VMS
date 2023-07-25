@@ -36,6 +36,9 @@ class Register : AppCompatActivity() {
         databaseReference = FirebaseDatabase.getInstance().getReference("Users")
 
 
+        alreadyHaveAccount.setOnClickListener {
+            goToLogin()
+        }
 
         registerLabel.setOnClickListener {
 
@@ -77,17 +80,11 @@ class Register : AppCompatActivity() {
                         ).show()
                     }
 
-                alreadyHaveAccount.setOnClickListener {
-                    val intent = Intent(this@Register, Login::class.java)
-                    startActivity(intent)
-                    finish()
-                }
-
-                alreadyHaveAccount.setOnClickListener {
-                    val intent = Intent(this@Register, Login::class.java)
-                    startActivity(intent)
-                    finish()
-                }
+//                alreadyHaveAccount.setOnClickListener {
+//                    val intent = Intent(this@Register, Login::class.java)
+//                    startActivity(intent)
+//                    finish()
+//                }
             }
         }
     }

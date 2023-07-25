@@ -1,22 +1,29 @@
 package com.example.vms.ui.dashboard
 
-import android.annotation.SuppressLint
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.location.Location
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.example.vms.R
 import com.example.vms.ui.login.Login
 import com.example.vms.ui.spareParts.SpareParts
 import com.example.vms.ui.userNavigationBar.Rate
-import com.example.vms.ui.userNavigationBar.UserNotification
 import com.example.vms.ui.userNavigationBar.UserProfile
-import com.google.android.gms.maps.*
+import com.example.vms.ui.userNavigationBar.UserReminder
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.MapView
+import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
@@ -43,6 +50,15 @@ class UserDashboard : AppCompatActivity(), OnMapReadyCallback {
         setContentView(R.layout.activity_user_dashboard)
 
 
+        val findLocation = findViewById<Button>(R.id.btn_find_location)
+
+        findLocation.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW)
+            browserIntent.data = Uri.parse("https://www.google.com/maps/search/mechanics+near+me")
+            startActivity(browserIntent)
+        }
+
+
         val latitude = location?.latitude
         val longitude = location?.longitude
 
@@ -53,7 +69,7 @@ class UserDashboard : AppCompatActivity(), OnMapReadyCallback {
         drawerLayout = findViewById(R.id.drawerLayout)
         val ivMenu: ImageButton = findViewById(R.id.IvMenu)
 
-        val saveLocationInfo = findViewById<Button>(R.id.btn_find_location)
+//        val saveLocationInfo = findViewById<Button>(R.id.btn_find_location)
 
 
         val location = latitude?.let {
@@ -69,24 +85,33 @@ class UserDashboard : AppCompatActivity(), OnMapReadyCallback {
 
 
 
-//        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-//            == PackageManager.PERMISSION_GRANTED) {
-//
-//            initializeMap()
-//        } else {
-//            // Location permission is not granted, request the permission
-//            ActivityCompat.requestPermissions(
-//                this,
-//                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
-//                LOCATION_PERMISSION_REQUEST_CODE
-//            )
-//        }
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+            == PackageManager.PERMISSION_GRANTED) {
+
+            //initializeMap()
+            val mapView = findViewById<MapView>(R.id.mapView)
+            mapView.onCreate(savedInstanceState)
+            mapView.getMapAsync { googleMap ->
+                // Map initialization code
+                googleMap.isMyLocationEnabled = true
+                googleMap.uiSettings.isMyLocationButtonEnabled = true
+                // Add more map configuration and customization if needed
+            }
+
+        } else {
+            // Location permission is not granted, request the permission
+            ActivityCompat.requestPermissions(
+                this,
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                LOCATION_PERMISSION_REQUEST_CODE
+            )
+        }
 
 
         // Button to save location to db
-        saveLocationInfo.setOnClickListener {
-            locationRef.push().setValue(location)
-        }
+//        saveLocationInfo.setOnClickListener {
+//            locationRef.push().setValue(location)
+//        }
 
         ivMenu.setOnClickListener {
 
@@ -161,14 +186,12 @@ class UserDashboard : AppCompatActivity(), OnMapReadyCallback {
 
 
 
-    @SuppressLint("ResourceType")
     private fun goToShare() {
-        val intent = Intent(android.content.Intent.ACTION_SEND)
-        val shareBody = "Hello, I found a Super app"
-        intent.type = "text/email"
-        intent.putExtra(android.content.Intent.EXTRA_SUBJECT, getString(2))
-        intent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody)
-        startActivity(Intent.createChooser(intent, getString(2)))
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.type = "text/plain"
+        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.share))
+        intent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share))
+        startActivity(Intent.createChooser(intent, getString(R.string.share)))
     }
 
     private fun goToSpareParts() {
@@ -192,7 +215,7 @@ class UserDashboard : AppCompatActivity(), OnMapReadyCallback {
     }
 
     private fun goToUserNotification() {
-        val intent = Intent(this@UserDashboard, UserNotification::class.java)
+        val intent = Intent(this@UserDashboard, UserReminder::class.java)
         startActivity(intent)
         finish()
     }

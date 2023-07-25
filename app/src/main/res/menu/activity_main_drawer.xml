@@ -20,7 +20,7 @@
         <item
             android:id="@+id/notification"
             android:icon="@drawable/ic_baseline_notifications"
-            android:title="@string/notification" />
+            android:title="@string/notification"/>
 
         <item
             android:id="@+id/brands"

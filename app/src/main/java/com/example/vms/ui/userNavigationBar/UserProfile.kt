@@ -45,4 +45,5 @@ class UserProfile : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
 }

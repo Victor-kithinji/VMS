@@ -12,17 +12,18 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="220dp"
         android:layout_marginEnd="16dp"
+        android:autofillHints="name"
         android:hint="@string/full_name2"
+        android:inputType="text"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
-        android:inputType="text"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="name" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/phoneLabel"
@@ -42,13 +43,15 @@
         app:layout_constraintTop_toBottomOf="@+id/fullNameLabel"
         android:autofillHints="phone" />
 
+
     <EditText
         android:id="@+id/emailAddressLabel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:autofillHints="emailAddress"
         android:ems="10"
         android:hint="@string/email9"
         android:inputType="textEmailAddress"
@@ -56,16 +59,16 @@
         android:textColorHint="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneLabel"
-        android:autofillHints="emailAddress" />
-
+        app:layout_constraintTop_toBottomOf="@+id/phoneLabel" />
 
     <EditText
         android:id="@+id/passwordLabel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
+        android:autofillHints="password"
         android:ems="10"
         android:hint="@string/password6"
         android:inputType="textPassword"
@@ -73,19 +76,20 @@
         android:textColorHint="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/emailAddressLabel"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/emailAddressLabel"
-        app:layout_constraintTop_toBottomOf="@+id/emailAddressLabel"
-        android:autofillHints="password" />
+        app:layout_constraintTop_toBottomOf="@+id/emailAddressLabel" />
 
     <Button
         android:id="@+id/registerLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/register8"
+        android:layout_marginTop="40dp"
         android:backgroundTint="@color/red"
+        android:text="@string/register8"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@+id/passwordLabel"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/passwordLabel"
         app:layout_constraintTop_toBottomOf="@+id/passwordLabel" />
 
@@ -101,4 +105,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="206dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vms_logo" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

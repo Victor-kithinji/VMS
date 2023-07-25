@@ -28,18 +28,20 @@
     <string name="user">USER</string>
     <string name="mechanic">MECHANIC</string>
     <string name="welcome_to_vms_app_click_to_login_as_a_mechanic_or_user">Welcome To VMS app. Click To Login as a Mechanic or User</string>
-    <string name="find_user_s_location">Find User\'s Location</string>
+    <string name="find_user_s_location">Find Mechanic\'s Location</string>
     <string name="email_address5">Email Address</string>
     <string name="password7">Password</string>
     <string name="loginm">Login</string>
     <string name="don_t_have_an_account_registerr">Don\'t have an account? Register</string>
     <string name="text">text</string>
-    <string name="notification">Notification</string>
+    <string name="notification">Reminder</string>
     <string name="rating">Rating</string>
     <string name="brands">Brands</string>
     <string name="rate">Rate</string>
     <string name="communicate">Communicate</string>
     <string name="share">Share</string>
+
+
     <string name="Profile">Profile</string>
     <string name="profile">Profile</string>
     <string name="profile2">Profile</string>
@@ -53,6 +55,15 @@
     <string name="victor">victor</string>
     <string name="addToCart">Add To Cart</string>
     <string name="clutch">Clutch</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="_200">200</string>
     <string name="task">Reminders</string>
     <string name="create_tasks">Set Reminder</string>

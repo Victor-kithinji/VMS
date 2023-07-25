@@ -38,6 +38,7 @@ class AddToCartActivity : AppCompatActivity() {
         val sparePartsName = intent.getStringExtra("Name")
         val priceNew = intent.getStringExtra("Price")
         val imageNew = intent.getStringExtra("Image")
+//        val imageUri = Uri.parse(imageNew)
 
         pname.text = sparePartsName
         price.text = priceNew

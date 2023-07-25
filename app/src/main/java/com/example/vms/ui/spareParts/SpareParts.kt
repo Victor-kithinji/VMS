@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.vms.R
 import com.example.vms.databinding.ActivitySparePartsBinding
+import com.example.vms.ui.dashboard.UserDashboard
 import com.example.vms.ui.model.MyProductData
 import com.example.vms.ui.spareParts.addcart.SparePartsAdapter
 import com.example.vms.ui.spareParts.retrofit.MyRetrofit
@@ -78,6 +79,12 @@ class SpareParts : AppCompatActivity() {
             }
 
         })
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, UserDashboard::class.java)
+        startActivity(intent)
+        finish()
     }
 
     companion object {

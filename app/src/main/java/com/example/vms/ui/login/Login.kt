@@ -26,6 +26,12 @@ class Login : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
+        textView2.setOnClickListener {
+            val intent = Intent(this@Login, Register::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         button2.setOnClickListener {
             val firebaseAuth = FirebaseAuth.getInstance()
 
@@ -61,11 +67,7 @@ class Login : AppCompatActivity() {
                             }
                         }
                     }
-                textView2.setOnClickListener {
-                    val intent = Intent(this@Login, Register::class.java)
-                    startActivity(intent)
-                    finish()
-                }
+
             }
 
         }
